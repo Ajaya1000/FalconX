@@ -16,6 +16,15 @@
 		A54B42242AA7A1D500871E1C /* FalconXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42232AA7A1D500871E1C /* FalconXTests.swift */; };
 		A54B422E2AA7A1D600871E1C /* FalconXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B422D2AA7A1D600871E1C /* FalconXUITests.swift */; };
 		A54B42302AA7A1D600871E1C /* FalconXUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B422F2AA7A1D600871E1C /* FalconXUITestsLaunchTests.swift */; };
+		A54B42412AA7A9CC00871E1C /* DisplayString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42402AA7A9CC00871E1C /* DisplayString.swift */; };
+		A54B42442AA7ACCD00871E1C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42432AA7ACCD00871E1C /* UIColor+Extension.swift */; };
+		A54B42462AA7ACEF00871E1C /* ColorPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42452AA7ACEF00871E1C /* ColorPreferences.swift */; };
+		A54B42492AA7B13C00871E1C /* FXLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42482AA7B13C00871E1C /* FXLayoutConstraint.swift */; };
+		A54B424B2AA7B16F00871E1C /* FXDimensionConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B424A2AA7B16F00871E1C /* FXDimensionConstraint.swift */; };
+		A54B424D2AA7B1A300871E1C /* FXHorizontalConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B424C2AA7B1A300871E1C /* FXHorizontalConstraint.swift */; };
+		A54B424F2AA7B1D400871E1C /* FXVerticalConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B424E2AA7B1D400871E1C /* FXVerticalConstraint.swift */; };
+		A54B42512AA7B2BD00871E1C /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42502AA7B2BD00871E1C /* Array+Extension.swift */; };
+		A54B42552AA7B86700871E1C /* FXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42542AA7B86700871E1C /* FXButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		A54B42292AA7A1D500871E1C /* FalconXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FalconXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54B422D2AA7A1D600871E1C /* FalconXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconXUITests.swift; sourceTree = "<group>"; };
 		A54B422F2AA7A1D600871E1C /* FalconXUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconXUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A54B42402AA7A9CC00871E1C /* DisplayString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayString.swift; sourceTree = "<group>"; };
+		A54B42432AA7ACCD00871E1C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		A54B42452AA7ACEF00871E1C /* ColorPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPreferences.swift; sourceTree = "<group>"; };
+		A54B42482AA7B13C00871E1C /* FXLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXLayoutConstraint.swift; sourceTree = "<group>"; };
+		A54B424A2AA7B16F00871E1C /* FXDimensionConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXDimensionConstraint.swift; sourceTree = "<group>"; };
+		A54B424C2AA7B1A300871E1C /* FXHorizontalConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXHorizontalConstraint.swift; sourceTree = "<group>"; };
+		A54B424E2AA7B1D400871E1C /* FXVerticalConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXVerticalConstraint.swift; sourceTree = "<group>"; };
+		A54B42502AA7B2BD00871E1C /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		A54B42542AA7B86700871E1C /* FXButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,10 @@
 		A54B420B2AA7A1D500871E1C /* FalconX */ = {
 			isa = PBXGroup;
 			children = (
+				A54B42472AA7B11300871E1C /* FXConstraints */,
+				A54B423F2AA7A9BC00871E1C /* Constants */,
+				A54B423C2AA7A51A00871E1C /* Views */,
+				A54B42422AA7AC9B00871E1C /* Extension */,
 				A54B420C2AA7A1D500871E1C /* AppDelegate.swift */,
 				A54B420E2AA7A1D500871E1C /* SceneDelegate.swift */,
 				A54B42102AA7A1D500871E1C /* ViewController.swift */,
@@ -125,6 +147,43 @@
 				A54B422F2AA7A1D600871E1C /* FalconXUITestsLaunchTests.swift */,
 			);
 			path = FalconXUITests;
+			sourceTree = "<group>";
+		};
+		A54B423C2AA7A51A00871E1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A54B42542AA7B86700871E1C /* FXButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A54B423F2AA7A9BC00871E1C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A54B42402AA7A9CC00871E1C /* DisplayString.swift */,
+				A54B42452AA7ACEF00871E1C /* ColorPreferences.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A54B42422AA7AC9B00871E1C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A54B42432AA7ACCD00871E1C /* UIColor+Extension.swift */,
+				A54B42502AA7B2BD00871E1C /* Array+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A54B42472AA7B11300871E1C /* FXConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				A54B42482AA7B13C00871E1C /* FXLayoutConstraint.swift */,
+				A54B424A2AA7B16F00871E1C /* FXDimensionConstraint.swift */,
+				A54B424C2AA7B1A300871E1C /* FXHorizontalConstraint.swift */,
+				A54B424E2AA7B1D400871E1C /* FXVerticalConstraint.swift */,
+			);
+			path = FXConstraints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +317,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54B42492AA7B13C00871E1C /* FXLayoutConstraint.swift in Sources */,
+				A54B42462AA7ACEF00871E1C /* ColorPreferences.swift in Sources */,
 				A54B42112AA7A1D500871E1C /* ViewController.swift in Sources */,
+				A54B42552AA7B86700871E1C /* FXButton.swift in Sources */,
+				A54B42512AA7B2BD00871E1C /* Array+Extension.swift in Sources */,
+				A54B42412AA7A9CC00871E1C /* DisplayString.swift in Sources */,
+				A54B424F2AA7B1D400871E1C /* FXVerticalConstraint.swift in Sources */,
+				A54B42442AA7ACCD00871E1C /* UIColor+Extension.swift in Sources */,
 				A54B420D2AA7A1D500871E1C /* AppDelegate.swift in Sources */,
 				A54B420F2AA7A1D500871E1C /* SceneDelegate.swift in Sources */,
+				A54B424D2AA7B1A300871E1C /* FXHorizontalConstraint.swift in Sources */,
+				A54B424B2AA7B16F00871E1C /* FXDimensionConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
