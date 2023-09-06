@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     private var containerStack = UIStackView()
     private var titleLabel = UILabel()
     private var continueButton = FXButton(type: .custom)
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - Private Methods
-private extension ViewController {
+private extension HomeViewController {
     func setup() {
         addContainerStackView()
         addTitleLabel()

@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		A54B420D2AA7A1D500871E1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B420C2AA7A1D500871E1C /* AppDelegate.swift */; };
 		A54B420F2AA7A1D500871E1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B420E2AA7A1D500871E1C /* SceneDelegate.swift */; };
-		A54B42112AA7A1D500871E1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42102AA7A1D500871E1C /* ViewController.swift */; };
-		A54B42142AA7A1D500871E1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54B42122AA7A1D500871E1C /* Main.storyboard */; };
+		A54B42112AA7A1D500871E1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42102AA7A1D500871E1C /* HomeViewController.swift */; };
 		A54B42162AA7A1D500871E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A54B42152AA7A1D500871E1C /* Assets.xcassets */; };
 		A54B42192AA7A1D500871E1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54B42172AA7A1D500871E1C /* LaunchScreen.storyboard */; };
 		A54B42242AA7A1D500871E1C /* FalconXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42232AA7A1D500871E1C /* FalconXTests.swift */; };
@@ -25,6 +24,14 @@
 		A54B424F2AA7B1D400871E1C /* FXVerticalConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B424E2AA7B1D400871E1C /* FXVerticalConstraint.swift */; };
 		A54B42512AA7B2BD00871E1C /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42502AA7B2BD00871E1C /* Array+Extension.swift */; };
 		A54B42552AA7B86700871E1C /* FXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42542AA7B86700871E1C /* FXButton.swift */; };
+		A54B42582AA83BE800871E1C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A54B42572AA83BE800871E1C /* Swinject */; };
+		A54B425D2AA83D3700871E1C /* BaseCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B425C2AA83D3700871E1C /* BaseCoordinate.swift */; };
+		A54B425F2AA840CF00871E1C /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B425E2AA840CF00871E1C /* BaseNavigationController.swift */; };
+		A54B42612AA8414800871E1C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42602AA8414800871E1C /* AppCoordinator.swift */; };
+		A54B42642AA8475000871E1C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42632AA8475000871E1C /* HomeCoordinator.swift */; };
+		A54B42672AA8481300871E1C /* Container+RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42662AA8481300871E1C /* Container+RegisterDependencies.swift */; };
+		A54B42692AA8484200871E1C /* Container+Coordinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42682AA8484200871E1C /* Container+Coordinators.swift */; };
+		A54B426C2AA84F1D00871E1C /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = A54B426B2AA84F1D00871E1C /* SwinjectAutoregistration */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +55,7 @@
 		A54B42092AA7A1D500871E1C /* FalconX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FalconX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54B420C2AA7A1D500871E1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A54B420E2AA7A1D500871E1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A54B42102AA7A1D500871E1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A54B42132AA7A1D500871E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A54B42102AA7A1D500871E1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A54B42152AA7A1D500871E1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A54B42182AA7A1D500871E1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A54B421A2AA7A1D500871E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +73,12 @@
 		A54B424E2AA7B1D400871E1C /* FXVerticalConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXVerticalConstraint.swift; sourceTree = "<group>"; };
 		A54B42502AA7B2BD00871E1C /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		A54B42542AA7B86700871E1C /* FXButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXButton.swift; sourceTree = "<group>"; };
+		A54B425C2AA83D3700871E1C /* BaseCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinate.swift; sourceTree = "<group>"; };
+		A54B425E2AA840CF00871E1C /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		A54B42602AA8414800871E1C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A54B42632AA8475000871E1C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		A54B42662AA8481300871E1C /* Container+RegisterDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+RegisterDependencies.swift"; sourceTree = "<group>"; };
+		A54B42682AA8484200871E1C /* Container+Coordinators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Coordinators.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54B42582AA83BE800871E1C /* Swinject in Frameworks */,
+				A54B426C2AA84F1D00871E1C /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,14 +131,13 @@
 		A54B420B2AA7A1D500871E1C /* FalconX */ = {
 			isa = PBXGroup;
 			children = (
-				A54B42472AA7B11300871E1C /* FXConstraints */,
+				A54B42592AA83CA300871E1C /* App */,
+				A54B42652AA847E900871E1C /* DependencyInjection */,
 				A54B423F2AA7A9BC00871E1C /* Constants */,
 				A54B423C2AA7A51A00871E1C /* Views */,
-				A54B42422AA7AC9B00871E1C /* Extension */,
+				A54B425A2AA83CD400871E1C /* Utils */,
 				A54B420C2AA7A1D500871E1C /* AppDelegate.swift */,
 				A54B420E2AA7A1D500871E1C /* SceneDelegate.swift */,
-				A54B42102AA7A1D500871E1C /* ViewController.swift */,
-				A54B42122AA7A1D500871E1C /* Main.storyboard */,
 				A54B42152AA7A1D500871E1C /* Assets.xcassets */,
 				A54B42172AA7A1D500871E1C /* LaunchScreen.storyboard */,
 				A54B421A2AA7A1D500871E1C /* Info.plist */,
@@ -186,6 +199,52 @@
 			path = FXConstraints;
 			sourceTree = "<group>";
 		};
+		A54B42592AA83CA300871E1C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A54B42602AA8414800871E1C /* AppCoordinator.swift */,
+				A54B425B2AA83D1900871E1C /* Base */,
+				A54B42622AA8473D00871E1C /* Home */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A54B425A2AA83CD400871E1C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A54B42472AA7B11300871E1C /* FXConstraints */,
+				A54B42422AA7AC9B00871E1C /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A54B425B2AA83D1900871E1C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A54B425C2AA83D3700871E1C /* BaseCoordinate.swift */,
+				A54B425E2AA840CF00871E1C /* BaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A54B42622AA8473D00871E1C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A54B42632AA8475000871E1C /* HomeCoordinator.swift */,
+				A54B42102AA7A1D500871E1C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A54B42652AA847E900871E1C /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				A54B42662AA8481300871E1C /* Container+RegisterDependencies.swift */,
+				A54B42682AA8484200871E1C /* Container+Coordinators.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,6 +261,10 @@
 			dependencies = (
 			);
 			name = FalconX;
+			packageProductDependencies = (
+				A54B42572AA83BE800871E1C /* Swinject */,
+				A54B426B2AA84F1D00871E1C /* SwinjectAutoregistration */,
+			);
 			productName = FalconX;
 			productReference = A54B42092AA7A1D500871E1C /* FalconX.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +337,10 @@
 				Base,
 			);
 			mainGroup = A54B42002AA7A1D500871E1C;
+			packageReferences = (
+				A54B42562AA83BE800871E1C /* XCRemoteSwiftPackageReference "Swinject" */,
+				A54B426A2AA84F1D00871E1C /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
 			productRefGroup = A54B420A2AA7A1D500871E1C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -292,7 +359,6 @@
 			files = (
 				A54B42192AA7A1D500871E1C /* LaunchScreen.storyboard in Resources */,
 				A54B42162AA7A1D500871E1C /* Assets.xcassets in Resources */,
-				A54B42142AA7A1D500871E1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,16 +383,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54B42692AA8484200871E1C /* Container+Coordinators.swift in Sources */,
 				A54B42492AA7B13C00871E1C /* FXLayoutConstraint.swift in Sources */,
 				A54B42462AA7ACEF00871E1C /* ColorPreferences.swift in Sources */,
-				A54B42112AA7A1D500871E1C /* ViewController.swift in Sources */,
+				A54B425D2AA83D3700871E1C /* BaseCoordinate.swift in Sources */,
+				A54B42112AA7A1D500871E1C /* HomeViewController.swift in Sources */,
 				A54B42552AA7B86700871E1C /* FXButton.swift in Sources */,
 				A54B42512AA7B2BD00871E1C /* Array+Extension.swift in Sources */,
 				A54B42412AA7A9CC00871E1C /* DisplayString.swift in Sources */,
 				A54B424F2AA7B1D400871E1C /* FXVerticalConstraint.swift in Sources */,
+				A54B425F2AA840CF00871E1C /* BaseNavigationController.swift in Sources */,
 				A54B42442AA7ACCD00871E1C /* UIColor+Extension.swift in Sources */,
 				A54B420D2AA7A1D500871E1C /* AppDelegate.swift in Sources */,
 				A54B420F2AA7A1D500871E1C /* SceneDelegate.swift in Sources */,
+				A54B42612AA8414800871E1C /* AppCoordinator.swift in Sources */,
+				A54B42672AA8481300871E1C /* Container+RegisterDependencies.swift in Sources */,
+				A54B42642AA8475000871E1C /* HomeCoordinator.swift in Sources */,
 				A54B424D2AA7B1A300871E1C /* FXHorizontalConstraint.swift in Sources */,
 				A54B424B2AA7B16F00871E1C /* FXDimensionConstraint.swift in Sources */,
 			);
@@ -365,14 +437,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A54B42122AA7A1D500871E1C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A54B42132AA7A1D500871E1C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A54B42172AA7A1D500871E1C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -511,6 +575,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -539,6 +604,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -670,6 +736,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A54B42562AA83BE800871E1C /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
+		A54B426A2AA84F1D00871E1C /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A54B42572AA83BE800871E1C /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A54B42562AA83BE800871E1C /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		A54B426B2AA84F1D00871E1C /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A54B426A2AA84F1D00871E1C /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A54B42012AA7A1D500871E1C /* Project object */;
 }
