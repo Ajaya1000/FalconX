@@ -42,7 +42,7 @@ private extension FXButton {
         self.setTitleColor(ColorPreferences.primary, for: .highlighted)
         
         
-        self.layer.shadowColor = UIColor.white.cgColor
+        self.layer.shadowColor = ColorPreferences.primary.cgColor
         self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 0.5
         

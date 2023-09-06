@@ -32,7 +32,7 @@ private extension ViewController {
         containerStack.axis = .vertical
         containerStack.distribution = .fill
         containerStack.alignment = .center
-        containerStack.spacing = 8
+        containerStack.spacing = Constraints.spacing
         
         containerStack.translatesAutoresizingMaskIntoConstraints = false
         
@@ -67,4 +67,5 @@ private extension ViewController {
 
 private struct Constraints {
     static let margin = CGFloat(16)
+    static let spacing = CGFloat(32)
 }
