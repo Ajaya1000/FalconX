@@ -14,7 +14,7 @@ protocol GameViewModelOutput: AnyObject {
     func moveToPrev()
     func didFinish()
     
-    func loadData( _ clsr: @escaping (Error?, Error?) -> Void)
+    func loadData( _ clsr: @escaping (Error?, Error?, Error?) -> Void)
 }
 
 class GameViewModel {
@@ -46,7 +46,11 @@ class GameViewModel {
 }
 
 private extension GameViewModel {
-    func loadPlanetData( _ completion: @escaping (Error?) -> Void) {
+    func loadSessionData(_ completion: @escaping (Error?) -> Void) {
+        sessionService.loadSession(completion)
+    }
+    
+    func loadPlanetData(_ completion: @escaping (Error?) -> Void) {
         gameService.loadPlanetsData { [weak self] res in
             guard let self else {
                 completion(FXError.unknownError)
@@ -104,11 +108,19 @@ extension GameViewModel: GameViewModelOutput {
     
     /// Loads all the data
     /// - Parameter completion: takes two params, 1st being the error from loading plants and 2nd being the error from loading vehicle
-    func loadData( _ completion: @escaping (Error?, Error?) -> Void) {
+    func loadData( _ completion: @escaping (Error?, Error?, Error?) -> Void) {
         let group = DispatchGroup()
         
+        var sessionLoadingError: Error?
         var planetDataLoadingError: Error?
         var vehicleDataLoadingError: Error?
+        
+        // start loading session data
+        group.enter()
+        loadSessionData { error in
+            sessionLoadingError = error
+            group.leave()
+        }
         
         // Start loading planets
         group.enter()
@@ -126,7 +138,7 @@ extension GameViewModel: GameViewModelOutput {
         
         // notify completion in main thread
         group.notify(queue: .main) {
-            completion(planetDataLoadingError, vehicleDataLoadingError)
+            completion(sessionLoadingError, planetDataLoadingError, vehicleDataLoadingError)
         }
     }
 }

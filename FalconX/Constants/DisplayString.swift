@@ -22,4 +22,7 @@ struct DisplayString {
     
     static let unknownError = "Something went wrong!"
     static let errrorLoadingGameData = "Error while loading game data. Please try Again!"
+    static let errorLoadingSession = "Error while fetching session!"
+    
+    static let okay = "Okay"
 }

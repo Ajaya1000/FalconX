@@ -28,21 +28,26 @@ class GameCoordinator: BaseCoordinator {
 
 private extension GameCoordinator {
     func loadGameData() {
-        viewModel.loadData { [weak self] planetError, vehicleError in
+        viewModel.loadData { [weak self] sessionError, planetError, vehicleError in
             guard let self else { return }
             // debug errors
+            debugPrint(sessionError)
             debugPrint(planetError)
             debugPrint(vehicleError)
             
-            guard planetError == nil, vehicleError == nil else {
-                let alert: AlertActionItem = .action(title: "Okay", handler: { [weak self] _ in
+            guard sessionError == nil,
+                  planetError == nil,
+                  vehicleError == nil else {
+                
+                let alert: AlertActionItem = .action(title: DisplayString.okay, handler: { [weak self] _ in
                     guard let self else { return }
                         self.navigationController.popViewController(animated: true)
                         self.parentCoordinator?.didFinish(coordinator: self)
                 })
                 
-                self.navigationController.topViewController?.showAlertController(with: DisplayString.errrorLoadingGameData,
-                                                                                 alerts: [alert])
+                let description = (sessionError != nil) ? DisplayString.errorLoadingSession : DisplayString.errrorLoadingGameData
+                
+                self.navigationController.topViewController?.showAlertController(with: description, alerts: [alert])
                 return
             }
             

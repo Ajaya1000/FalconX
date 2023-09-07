@@ -57,6 +57,7 @@
 		A54B429F2AAA072500871E1C /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B429E2AAA072500871E1C /* GameService.swift */; };
 		A54B42A12AAA097B00871E1C /* FXError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A02AAA097B00871E1C /* FXError.swift */; };
 		A54B42A32AAA193D00871E1C /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A22AAA193D00871E1C /* UIAlertController+Extension.swift */; };
+		A54B42A52AAA1E5500871E1C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A42AAA1E5500871E1C /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		A54B429E2AAA072500871E1C /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		A54B42A02AAA097B00871E1C /* FXError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXError.swift; sourceTree = "<group>"; };
 		A54B42A22AAA193D00871E1C /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		A54B42A42AAA1E5500871E1C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +349,7 @@
 			children = (
 				A54B42962AA9D18600871E1C /* Planet.swift */,
 				A54B42982AA9D1B100871E1C /* Vehicle.swift */,
+				A54B42A42AAA1E5500871E1C /* Session.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				A54B42862AA9869100871E1C /* FXPageViewController.swift in Sources */,
 				A54B42732AA85A8C00871E1C /* GameView.swift in Sources */,
 				A54B42412AA7A9CC00871E1C /* DisplayString.swift in Sources */,
+				A54B42A52AAA1E5500871E1C /* Session.swift in Sources */,
 				A54B42772AA85BDF00871E1C /* GameViewModel.swift in Sources */,
 				A54B429F2AAA072500871E1C /* GameService.swift in Sources */,
 				A54B424F2AA7B1D400871E1C /* FXVerticalConstraint.swift in Sources */,

@@ -11,4 +11,5 @@ struct APIEndPoints {
     static let base = "https://findfalcone.geektrust.com"
     static let planets = "\(base)/planets"
     static let vehicles = "\(base)/vehicles"
+    static let token = "\(base)/token"
 }

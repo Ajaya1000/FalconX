@@ -16,6 +16,7 @@ class NetworkManager {
     
     enum HttpMethods: String {
         case get
+        case post
         
         var value: String {
             self.rawValue.uppercased()
@@ -27,10 +28,16 @@ class NetworkManager {
     ///   - url: end point
     ///   - httMethod: http method
     ///   - completion: completion closure gets call after the request is complete with result of either the request type or error
-    func request<T: Decodable>(url: URL, httMethod: HttpMethods = .get, completion: @escaping (Result<T, Error>) -> Void) {
+    func request<T: Decodable>(url: URL, httMethod: HttpMethods = .get, httpHeaders: [String: String]? = nil, completion: @escaping (Result<T, Error>) -> Void) {
         
         var request = URLRequest(url: url)
         request.httpMethod = httMethod.value
+        
+        if let httpHeaders = httpHeaders {
+            for (key, value) in httpHeaders {
+                request.setValue(value, forHTTPHeaderField: key)
+            }
+        }
         
         let urlSession = URLSession.shared.dataTask(with: request) { data, response, error in
             
