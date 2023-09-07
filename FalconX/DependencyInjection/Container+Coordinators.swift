@@ -13,5 +13,6 @@ extension Container {
     func registerCoordinators() {
         self.autoregister(AppCoordinator.self, initializer: AppCoordinator.init)
         self.autoregister(HomeCoordinator.self, initializer: HomeCoordinator.init)
+        self.autoregister(GameCoordinator.self, initializer: GameCoordinator.init)
     }
 }

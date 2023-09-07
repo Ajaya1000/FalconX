@@ -9,11 +9,19 @@ import Foundation
 import UIKit
 
 class HomeCoordinator: BaseCoordinator {
-    
     override func start() {
         let viewController = HomeViewController()
+        viewController.delegate = self
         
-        self.navigationController.isNavigationBarHidden = true
-        self.navigationController.viewControllers = [viewController]
+        self.navigationController.setViewControllers([viewController], animated: true)
+    }
+}
+
+extension HomeCoordinator: HomeDelegate {
+    func startGame() {
+        let coordinator = AppDelegate.container.resolve(GameCoordinator.self)!
+        coordinator.navigationController = self.navigationController
+        
+        coordinator.start()
     }
 }

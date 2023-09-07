@@ -22,7 +22,7 @@ class BaseCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     
     var navigationController = UINavigationController()
-    var parentCoordinator: Coordinator?
+    weak var parentCoordinator: Coordinator?
     
     func start() {
         fatalError("Start method must be implemented")

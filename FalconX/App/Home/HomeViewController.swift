@@ -7,7 +7,16 @@
 
 import UIKit
 
+protocol HomeDelegate: AnyObject {
+    func startGame()
+}
+
 class HomeViewController: UIViewController {
+    
+    // MARK: - Dependencies
+    weak var delegate: HomeDelegate?
+    
+    // MARK: - Properties
     private var containerStack = UIStackView()
     private var titleLabel = UILabel()
     private var continueButton = FXButton(type: .custom)
@@ -20,7 +29,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-// MARK: - Private Methods
+// MARK: - UI Methods
 private extension HomeViewController {
     func setup() {
         addContainerStackView()
@@ -59,9 +68,17 @@ private extension HomeViewController {
     func addContinueButton() {
         continueButton.setTitle(DisplayString.getStarted, for: .normal)
         continueButton.translatesAutoresizingMaskIntoConstraints = false
+        continueButton.addTarget(self, action: #selector(didTapContinueButton), for: .touchUpInside)
         
         // add into subview
         self.containerStack.addArrangedSubview(continueButton)
+    }
+}
+
+// MARK: - Action Methods
+private extension HomeViewController {
+    @objc func didTapContinueButton() {
+        delegate?.startGame()
     }
 }
 

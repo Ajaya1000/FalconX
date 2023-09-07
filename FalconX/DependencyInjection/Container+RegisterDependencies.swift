@@ -11,5 +11,7 @@ import Swinject
 extension Container {
     func registerDependencies() {
         registerCoordinators()
+        registerServices()
+        registerViewModels()
     }
 }
