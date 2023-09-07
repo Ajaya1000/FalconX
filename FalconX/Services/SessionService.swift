@@ -11,5 +11,4 @@ class SessionService {
     enum SessionError: Error {
         case invalidToken
     }
-    
 }

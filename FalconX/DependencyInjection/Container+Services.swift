@@ -13,5 +13,6 @@ extension Container {
     func registerServices() {
         self.autoregister(SessionService.self, initializer: SessionService.init).inObjectScope(.container)
         self.autoregister(NetworkManager.self, initializer: NetworkManager.init).inObjectScope(.container)
+        self.autoregister(GameService.self, initializer: GameService.init).inObjectScope(.container)
     }
 }

@@ -11,7 +11,7 @@ protocol HomeDelegate: AnyObject {
     func startGame()
 }
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     // MARK: - Dependencies
     weak var delegate: HomeDelegate?

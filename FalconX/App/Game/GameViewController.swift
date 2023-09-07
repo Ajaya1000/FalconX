@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: BaseViewController {
     // MARK: - Dependencies
     private var viewModel: GameViewModel
     

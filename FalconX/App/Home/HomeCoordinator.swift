@@ -22,6 +22,6 @@ extension HomeCoordinator: HomeDelegate {
         let coordinator = AppDelegate.container.resolve(GameCoordinator.self)!
         coordinator.navigationController = self.navigationController
         
-        coordinator.start()
+        self.start(coordinator: coordinator)
     }
 }

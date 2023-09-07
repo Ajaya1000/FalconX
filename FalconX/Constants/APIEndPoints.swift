@@ -8,7 +8,7 @@
 import Foundation
 
 struct APIEndPoints {
-    static let base = "https://api.mocklets.com/p68348"
-    static let success = "\(base)/success_case"
-    static let failure = "\(base)/failure_case"
+    static let base = "https://findfalcone.geektrust.com"
+    static let planets = "\(base)/planets"
+    static let vehicles = "\(base)/vehicles"
 }

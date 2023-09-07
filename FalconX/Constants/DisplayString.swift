@@ -19,4 +19,7 @@ struct DisplayString {
     
     static let back = "Back"
     static let next = "Next"
+    
+    static let unknownError = "Something went wrong!"
+    static let errrorLoadingGameData = "Error while loading game data. Please try Again!"
 }

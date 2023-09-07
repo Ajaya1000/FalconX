@@ -44,6 +44,19 @@
 		A54B42822AA86A4F00871E1C /* Container+ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42812AA86A4F00871E1C /* Container+ViewModels.swift */; };
 		A54B42842AA97CAC00871E1C /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42832AA97CAC00871E1C /* Collection+Extension.swift */; };
 		A54B42862AA9869100871E1C /* FXPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42852AA9869100871E1C /* FXPageViewController.swift */; };
+		A54B42882AA99EF600871E1C /* GameLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42872AA99EF600871E1C /* GameLoaderViewController.swift */; };
+		A54B428B2AA99FD900871E1C /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = A54B428A2AA99FD900871E1C /* loader.json */; };
+		A54B428E2AA9A04B00871E1C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A54B428D2AA9A04B00871E1C /* Lottie */; };
+		A54B42902AA9A08400871E1C /* FXLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B428F2AA9A08400871E1C /* FXLoaderView.swift */; };
+		A54B42922AA9A3EF00871E1C /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42912AA9A3EF00871E1C /* UINavigationController+Extension.swift */; };
+		A54B42942AA9A5E200871E1C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42932AA9A5E200871E1C /* BaseViewController.swift */; };
+		A54B42972AA9D18600871E1C /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42962AA9D18600871E1C /* Planet.swift */; };
+		A54B42992AA9D1B100871E1C /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42982AA9D1B100871E1C /* Vehicle.swift */; };
+		A54B429B2AA9D3E000871E1C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B429A2AA9D3E000871E1C /* UIViewController+Extension.swift */; };
+		A54B429D2AA9D4CC00871E1C /* FXUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B429C2AA9D4CC00871E1C /* FXUtil.swift */; };
+		A54B429F2AAA072500871E1C /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B429E2AAA072500871E1C /* GameService.swift */; };
+		A54B42A12AAA097B00871E1C /* FXError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A02AAA097B00871E1C /* FXError.swift */; };
+		A54B42A32AAA193D00871E1C /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A22AAA193D00871E1C /* UIAlertController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +116,18 @@
 		A54B42812AA86A4F00871E1C /* Container+ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+ViewModels.swift"; sourceTree = "<group>"; };
 		A54B42832AA97CAC00871E1C /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		A54B42852AA9869100871E1C /* FXPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXPageViewController.swift; sourceTree = "<group>"; };
+		A54B42872AA99EF600871E1C /* GameLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLoaderViewController.swift; sourceTree = "<group>"; };
+		A54B428A2AA99FD900871E1C /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		A54B428F2AA9A08400871E1C /* FXLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXLoaderView.swift; sourceTree = "<group>"; };
+		A54B42912AA9A3EF00871E1C /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		A54B42932AA9A5E200871E1C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A54B42962AA9D18600871E1C /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		A54B42982AA9D1B100871E1C /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		A54B429A2AA9D3E000871E1C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		A54B429C2AA9D4CC00871E1C /* FXUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXUtil.swift; sourceTree = "<group>"; };
+		A54B429E2AAA072500871E1C /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		A54B42A02AAA097B00871E1C /* FXError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXError.swift; sourceTree = "<group>"; };
+		A54B42A22AAA193D00871E1C /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +137,7 @@
 			files = (
 				A54B42582AA83BE800871E1C /* Swinject in Frameworks */,
 				A54B426C2AA84F1D00871E1C /* SwinjectAutoregistration in Frameworks */,
+				A54B428E2AA9A04B00871E1C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,10 +181,12 @@
 		A54B420B2AA7A1D500871E1C /* FalconX */ = {
 			isa = PBXGroup;
 			children = (
+				A54B42892AA99FC300871E1C /* MediaAsset */,
 				A54B42592AA83CA300871E1C /* App */,
 				A54B42782AA85C2E00871E1C /* Services */,
 				A54B42652AA847E900871E1C /* DependencyInjection */,
 				A54B423F2AA7A9BC00871E1C /* Constants */,
+				A54B42952AA9D16600871E1C /* Models */,
 				A54B423C2AA7A51A00871E1C /* Views */,
 				A54B425A2AA83CD400871E1C /* Utils */,
 				A54B420C2AA7A1D500871E1C /* AppDelegate.swift */,
@@ -192,6 +220,7 @@
 			children = (
 				A54B42542AA7B86700871E1C /* FXButton.swift */,
 				A54B42852AA9869100871E1C /* FXPageViewController.swift */,
+				A54B428F2AA9A08400871E1C /* FXLoaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +231,7 @@
 				A54B42402AA7A9CC00871E1C /* DisplayString.swift */,
 				A54B42452AA7ACEF00871E1C /* ColorPreferences.swift */,
 				A54B427D2AA85E2200871E1C /* APIEndPoints.swift */,
+				A54B42A02AAA097B00871E1C /* FXError.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -212,6 +242,9 @@
 				A54B42432AA7ACCD00871E1C /* UIColor+Extension.swift */,
 				A54B42502AA7B2BD00871E1C /* Array+Extension.swift */,
 				A54B42832AA97CAC00871E1C /* Collection+Extension.swift */,
+				A54B42912AA9A3EF00871E1C /* UINavigationController+Extension.swift */,
+				A54B429A2AA9D3E000871E1C /* UIViewController+Extension.swift */,
+				A54B42A22AAA193D00871E1C /* UIAlertController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -243,6 +276,7 @@
 			children = (
 				A54B42472AA7B11300871E1C /* FXConstraints */,
 				A54B42422AA7AC9B00871E1C /* Extension */,
+				A54B429C2AA9D4CC00871E1C /* FXUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -252,6 +286,7 @@
 			children = (
 				A54B425C2AA83D3700871E1C /* BaseCoordinate.swift */,
 				A54B425E2AA840CF00871E1C /* BaseNavigationController.swift */,
+				A54B42932AA9A5E200871E1C /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -284,6 +319,7 @@
 				A54B42722AA85A8C00871E1C /* GameView.swift */,
 				A54B42742AA85B0900871E1C /* ResultViewController.swift */,
 				A54B42762AA85BDF00871E1C /* GameViewModel.swift */,
+				A54B42872AA99EF600871E1C /* GameLoaderViewController.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -293,8 +329,26 @@
 			children = (
 				A54B42792AA85C3F00871E1C /* SessionService.swift */,
 				A54B427B2AA85DF400871E1C /* NetworkManager.swift */,
+				A54B429E2AAA072500871E1C /* GameService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A54B42892AA99FC300871E1C /* MediaAsset */ = {
+			isa = PBXGroup;
+			children = (
+				A54B428A2AA99FD900871E1C /* loader.json */,
+			);
+			path = MediaAsset;
+			sourceTree = "<group>";
+		};
+		A54B42952AA9D16600871E1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A54B42962AA9D18600871E1C /* Planet.swift */,
+				A54B42982AA9D1B100871E1C /* Vehicle.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +370,7 @@
 			packageProductDependencies = (
 				A54B42572AA83BE800871E1C /* Swinject */,
 				A54B426B2AA84F1D00871E1C /* SwinjectAutoregistration */,
+				A54B428D2AA9A04B00871E1C /* Lottie */,
 			);
 			productName = FalconX;
 			productReference = A54B42092AA7A1D500871E1C /* FalconX.app */;
@@ -392,6 +447,7 @@
 			packageReferences = (
 				A54B42562AA83BE800871E1C /* XCRemoteSwiftPackageReference "Swinject" */,
 				A54B426A2AA84F1D00871E1C /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				A54B428C2AA9A04B00871E1C /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = A54B420A2AA7A1D500871E1C /* Products */;
 			projectDirPath = "";
@@ -409,6 +465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54B428B2AA99FD900871E1C /* loader.json in Resources */,
 				A54B42192AA7A1D500871E1C /* LaunchScreen.storyboard in Resources */,
 				A54B42162AA7A1D500871E1C /* Assets.xcassets in Resources */,
 			);
@@ -435,26 +492,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54B42992AA9D1B100871E1C /* Vehicle.swift in Sources */,
 				A54B42692AA8484200871E1C /* Container+Coordinators.swift in Sources */,
 				A54B42492AA7B13C00871E1C /* FXLayoutConstraint.swift in Sources */,
+				A54B429D2AA9D4CC00871E1C /* FXUtil.swift in Sources */,
+				A54B42922AA9A3EF00871E1C /* UINavigationController+Extension.swift in Sources */,
 				A54B42462AA7ACEF00871E1C /* ColorPreferences.swift in Sources */,
 				A54B425D2AA83D3700871E1C /* BaseCoordinate.swift in Sources */,
 				A54B42112AA7A1D500871E1C /* HomeViewController.swift in Sources */,
 				A54B42552AA7B86700871E1C /* FXButton.swift in Sources */,
+				A54B42942AA9A5E200871E1C /* BaseViewController.swift in Sources */,
 				A54B42512AA7B2BD00871E1C /* Array+Extension.swift in Sources */,
 				A54B42862AA9869100871E1C /* FXPageViewController.swift in Sources */,
 				A54B42732AA85A8C00871E1C /* GameView.swift in Sources */,
 				A54B42412AA7A9CC00871E1C /* DisplayString.swift in Sources */,
 				A54B42772AA85BDF00871E1C /* GameViewModel.swift in Sources */,
+				A54B429F2AAA072500871E1C /* GameService.swift in Sources */,
 				A54B424F2AA7B1D400871E1C /* FXVerticalConstraint.swift in Sources */,
 				A54B425F2AA840CF00871E1C /* BaseNavigationController.swift in Sources */,
 				A54B42802AA85E6200871E1C /* Container+Services.swift in Sources */,
 				A54B42842AA97CAC00871E1C /* Collection+Extension.swift in Sources */,
 				A54B427A2AA85C3F00871E1C /* SessionService.swift in Sources */,
 				A54B42712AA85A5D00871E1C /* GameCoordinator.swift in Sources */,
+				A54B42A32AAA193D00871E1C /* UIAlertController+Extension.swift in Sources */,
 				A54B42442AA7ACCD00871E1C /* UIColor+Extension.swift in Sources */,
 				A54B420D2AA7A1D500871E1C /* AppDelegate.swift in Sources */,
+				A54B42A12AAA097B00871E1C /* FXError.swift in Sources */,
+				A54B429B2AA9D3E000871E1C /* UIViewController+Extension.swift in Sources */,
 				A54B420F2AA7A1D500871E1C /* SceneDelegate.swift in Sources */,
+				A54B42882AA99EF600871E1C /* GameLoaderViewController.swift in Sources */,
 				A54B427E2AA85E2200871E1C /* APIEndPoints.swift in Sources */,
 				A54B42612AA8414800871E1C /* AppCoordinator.swift in Sources */,
 				A54B427C2AA85DF400871E1C /* NetworkManager.swift in Sources */,
@@ -463,6 +529,8 @@
 				A54B42642AA8475000871E1C /* HomeCoordinator.swift in Sources */,
 				A54B424D2AA7B1A300871E1C /* FXHorizontalConstraint.swift in Sources */,
 				A54B424B2AA7B16F00871E1C /* FXDimensionConstraint.swift in Sources */,
+				A54B42972AA9D18600871E1C /* Planet.swift in Sources */,
+				A54B42902AA9A08400871E1C /* FXLoaderView.swift in Sources */,
 				A54B42822AA86A4F00871E1C /* Container+ViewModels.swift in Sources */,
 				A54B42752AA85B0900871E1C /* ResultViewController.swift in Sources */,
 			);
@@ -818,6 +886,14 @@
 				minimumVersion = 2.8.0;
 			};
 		};
+		A54B428C2AA9A04B00871E1C /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -830,6 +906,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A54B426A2AA84F1D00871E1C /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = SwinjectAutoregistration;
+		};
+		A54B428D2AA9A04B00871E1C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A54B428C2AA9A04B00871E1C /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -45,3 +45,11 @@ extension Array where Element == NSLayoutConstraint {
         NSLayoutConstraint.deactivate(self)
     }
 }
+
+extension Array where Element: Equatable {
+    mutating func remove(_ element: Element) {
+        if let index = self.firstIndex(of: element) {
+            self.remove(at: index)
+        }
+    }
+}
