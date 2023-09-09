@@ -12,7 +12,11 @@ class SessionService {
     private let networkManager: NetworkManager
     
     // MARK: - Properties
-    private(set) var session: Session?
+    private(set) var session: Session? {
+        didSet{
+            debugPrint("session token: ", session?.token)
+        }
+    }
     
     // MARK: - Initializer
     init(networkManager: NetworkManager) {
