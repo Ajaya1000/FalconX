@@ -58,6 +58,10 @@
 		A54B42A12AAA097B00871E1C /* FXError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A02AAA097B00871E1C /* FXError.swift */; };
 		A54B42A32AAA193D00871E1C /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A22AAA193D00871E1C /* UIAlertController+Extension.swift */; };
 		A54B42A52AAA1E5500871E1C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A42AAA1E5500871E1C /* Session.swift */; };
+		A54B42A72AAA6EAD00871E1C /* FXScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A62AAA6EAD00871E1C /* FXScrollViewController.swift */; };
+		A54B42A92AAAF81400871E1C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A82AAAF81400871E1C /* String+Extension.swift */; };
+		A54B42AB2AAC3A0500871E1C /* FindPlanetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42AA2AAC3A0500871E1C /* FindPlanetRequest.swift */; };
+		A54B42AD2AAC3CCB00871E1C /* FindPlanetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42AC2AAC3CCB00871E1C /* FindPlanetResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +134,10 @@
 		A54B42A02AAA097B00871E1C /* FXError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXError.swift; sourceTree = "<group>"; };
 		A54B42A22AAA193D00871E1C /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		A54B42A42AAA1E5500871E1C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		A54B42A62AAA6EAD00871E1C /* FXScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXScrollViewController.swift; sourceTree = "<group>"; };
+		A54B42A82AAAF81400871E1C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A54B42AA2AAC3A0500871E1C /* FindPlanetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPlanetRequest.swift; sourceTree = "<group>"; };
+		A54B42AC2AAC3CCB00871E1C /* FindPlanetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPlanetResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +255,7 @@
 				A54B42912AA9A3EF00871E1C /* UINavigationController+Extension.swift */,
 				A54B429A2AA9D3E000871E1C /* UIViewController+Extension.swift */,
 				A54B42A22AAA193D00871E1C /* UIAlertController+Extension.swift */,
+				A54B42A82AAAF81400871E1C /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -289,6 +298,7 @@
 				A54B425C2AA83D3700871E1C /* BaseCoordinate.swift */,
 				A54B425E2AA840CF00871E1C /* BaseNavigationController.swift */,
 				A54B42932AA9A5E200871E1C /* BaseViewController.swift */,
+				A54B42A62AAA6EAD00871E1C /* FXScrollViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -350,6 +360,8 @@
 				A54B42962AA9D18600871E1C /* Planet.swift */,
 				A54B42982AA9D1B100871E1C /* Vehicle.swift */,
 				A54B42A42AAA1E5500871E1C /* Session.swift */,
+				A54B42AA2AAC3A0500871E1C /* FindPlanetRequest.swift */,
+				A54B42AC2AAC3CCB00871E1C /* FindPlanetResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -507,6 +519,7 @@
 				A54B42942AA9A5E200871E1C /* BaseViewController.swift in Sources */,
 				A54B42512AA7B2BD00871E1C /* Array+Extension.swift in Sources */,
 				A54B42862AA9869100871E1C /* FXPageViewController.swift in Sources */,
+				A54B42A92AAAF81400871E1C /* String+Extension.swift in Sources */,
 				A54B42732AA85A8C00871E1C /* GameView.swift in Sources */,
 				A54B42412AA7A9CC00871E1C /* DisplayString.swift in Sources */,
 				A54B42A52AAA1E5500871E1C /* Session.swift in Sources */,
@@ -519,6 +532,7 @@
 				A54B427A2AA85C3F00871E1C /* SessionService.swift in Sources */,
 				A54B42712AA85A5D00871E1C /* GameCoordinator.swift in Sources */,
 				A54B42A32AAA193D00871E1C /* UIAlertController+Extension.swift in Sources */,
+				A54B42AD2AAC3CCB00871E1C /* FindPlanetResponse.swift in Sources */,
 				A54B42442AA7ACCD00871E1C /* UIColor+Extension.swift in Sources */,
 				A54B420D2AA7A1D500871E1C /* AppDelegate.swift in Sources */,
 				A54B42A12AAA097B00871E1C /* FXError.swift in Sources */,
@@ -528,6 +542,7 @@
 				A54B427E2AA85E2200871E1C /* APIEndPoints.swift in Sources */,
 				A54B42612AA8414800871E1C /* AppCoordinator.swift in Sources */,
 				A54B427C2AA85DF400871E1C /* NetworkManager.swift in Sources */,
+				A54B42AB2AAC3A0500871E1C /* FindPlanetRequest.swift in Sources */,
 				A54B42672AA8481300871E1C /* Container+RegisterDependencies.swift in Sources */,
 				A54B426F2AA85A4D00871E1C /* GameViewController.swift in Sources */,
 				A54B42642AA8475000871E1C /* HomeCoordinator.swift in Sources */,
@@ -535,6 +550,7 @@
 				A54B424B2AA7B16F00871E1C /* FXDimensionConstraint.swift in Sources */,
 				A54B42972AA9D18600871E1C /* Planet.swift in Sources */,
 				A54B42902AA9A08400871E1C /* FXLoaderView.swift in Sources */,
+				A54B42A72AAA6EAD00871E1C /* FXScrollViewController.swift in Sources */,
 				A54B42822AA86A4F00871E1C /* Container+ViewModels.swift in Sources */,
 				A54B42752AA85B0900871E1C /* ResultViewController.swift in Sources */,
 			);
@@ -710,7 +726,6 @@
 				INFOPLIST_FILE = FalconX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -739,7 +754,6 @@
 				INFOPLIST_FILE = FalconX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

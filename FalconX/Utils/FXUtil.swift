@@ -18,6 +18,8 @@ struct FXUtil {
                 alertController.addAction(.init(title: title, style: .default, handler: handler))
             case .cancelAction(title: let title, handler: let handler):
                 alertController.addAction(.init(title: title, style: .cancel, handler: handler))
+            case .destructiveAction(title: let title, handler: let handler):
+                alertController.addAction(.init(title: title, style: .destructive, handler: handler))
             }
         }
         

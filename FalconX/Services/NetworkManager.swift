@@ -28,14 +28,28 @@ class NetworkManager {
     ///   - url: end point
     ///   - httMethod: http method
     ///   - completion: completion closure gets call after the request is complete with result of either the request type or error
-    func request<T: Decodable>(url: URL, httMethod: HttpMethods = .get, httpHeaders: [String: String]? = nil, completion: @escaping (Result<T, Error>) -> Void) {
+    func request<T: Decodable>(url: URL,
+                                             httMethod: HttpMethods = .get,
+                                             httpHeaders: [String: String]? = nil,
+                                             httpBody: Encodable? = nil,
+                                             completion: @escaping (Result<T, Error>) -> Void) {
         
         var request = URLRequest(url: url)
         request.httpMethod = httMethod.value
         
-        if let httpHeaders = httpHeaders {
+        if let httpHeaders {
             for (key, value) in httpHeaders {
                 request.setValue(value, forHTTPHeaderField: key)
+            }
+        }
+        
+        if httMethod == .post,
+           let httpBody {
+            do {
+                let data = try JSONEncoder().encode(httpBody)
+                request.httpBody = data
+            } catch {
+                completion(.failure(error))
             }
         }
         

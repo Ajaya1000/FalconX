@@ -11,3 +11,7 @@ struct Planet: Decodable {
     var name: String?
     var distance: Int?
 }
+
+extension Planet: Equatable {
+    
+}

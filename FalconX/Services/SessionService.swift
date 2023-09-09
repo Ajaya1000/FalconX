@@ -12,7 +12,7 @@ class SessionService {
     private let networkManager: NetworkManager
     
     // MARK: - Properties
-    var session: Session?
+    private(set) var session: Session?
     
     // MARK: - Initializer
     init(networkManager: NetworkManager) {

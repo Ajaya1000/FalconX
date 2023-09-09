@@ -16,6 +16,8 @@ protocol FXLayoutAxisConstraint {
     ///   - superView: view with respect to which the constraint is to be added
     /// - Returns: return the ``NSLayoutConstraint`` for the constraint
     func nsLayoutConstraint(for childView: UIView, with superView: UIView) -> NSLayoutConstraint
+    
+    func nsLayoutConstraint(for childView: UIView, with layoutGuide: UILayoutGuide) -> NSLayoutConstraint
 }
 
 /// Width and Height Constraint

@@ -36,4 +36,29 @@ extension GameService {
         
         networkManager.request(url: url, completion: completion)
     }
+    
+    func submit(planets: [Planet], vehicles: [Vehicle],_ completion: @escaping (Result<FindPlanetResponse, Error>) -> Void ) {
+        guard let url = URL(string: APIEndPoints.find) else {
+            completion(.failure(FXError.invalidURLString))
+            return
+        }
+        
+        guard let token = sessionService.session?.token else {
+            completion(.failure(SessionService.SessionError.invalidToken))
+            return
+        }
+        
+        let planetNames = planets.compactMap {$0.name}
+        let vehcileNames = vehicles.compactMap({$0.name})
+        
+        let headers: [String: String] = ["Accept": "application/json", "Content-Type": "application/json"]
+        
+        let requestBody = FindPlanetRequest(token: token, planetNames: planetNames, vehicleNames: vehcileNames)
+        
+        networkManager.request(url: url, httMethod: .post, httpHeaders: headers, httpBody: requestBody, completion: completion)
+    }
+}
+
+enum GameServiceError: String, Error {
+    case errorInSubmit
 }

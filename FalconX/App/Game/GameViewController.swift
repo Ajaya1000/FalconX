@@ -7,21 +7,29 @@
 
 import UIKit
 
-class GameViewController: BaseViewController {
+protocol GameViewControllerDelegate: AnyObject {
+    func submitSelections()
+}
+
+class GameViewController: FXScrollViewController {
     // MARK: - Dependencies
-    private var viewModel: GameViewModel
+    private let viewModel: GameViewModel
+    private unowned let delegate: GameViewControllerDelegate
     
     // MARK: - Properties
-    private var pageViewController = FXPageViewController()
-    private var containerView = UIStackView()
-    private var titleLabel = UILabel()
-    private var descriptionLabel = UILabel()
-    private var buttonStackView = UIStackView()
-    private var leftButton = FXButton(type: .custom)
-    private var rightButton = FXButton(type: .custom)
+    private let pageViewController = FXPageViewController()
+    private let containerView = UIStackView()
+    private let titleLabel = UILabel()
+    private let descriptionLabel = UILabel()
+    private let buttonStackView = UIStackView()
+    private let leftButton = FXButton(type: .custom)
+    private let rightButton = FXButton(type: .custom)
     
-    init(viewModel: GameViewModel) {
+    private var shouldShowConset: Bool = true
+    
+    init(viewModel: GameViewModel, delegate: GameViewControllerDelegate) {
         self.viewModel = viewModel
+        self.delegate = delegate
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -44,14 +52,15 @@ private extension GameViewController {
         setupContainerView()
         
         // add container as subview of view controller's view
-        self.view.addSubview(containerView)
-        
+        self.backgroundView.addSubview(containerView)
+
         // add constraints
-        let constraints: [FXLayoutAxisConstraint] = [FXVerticalConstraint.top(constant: Constraints.topMargin),
-                                                     FXHorizontalConstraint.left(constant: Constraints.leftMargin),
-                                                      FXHorizontalConstraint.right()]
+        let contentLayoutconstraints: [FXLayoutAxisConstraint] = [FXVerticalConstraint.top(constant: Constraints.topMargin),
+                                                                  FXVerticalConstraint.bottom(),
+                                                     FXHorizontalConstraint.left(constant: Constraints.horizontalMargin),
+                                                      FXHorizontalConstraint.right(constant: Constraints.horizontalMargin)]
         
-        constraints.activateConstraints(for: containerView, with: self.view)
+        contentLayoutconstraints.activateConstraints(for: containerView, with: self.backgroundView.contentLayoutGuide)
         
         // set up title label
         setup(titleLabel, text: DisplayString.findingFalcon, fontSize: Constraints.titleLabelFontSize)
@@ -89,6 +98,8 @@ private extension GameViewController {
         setup(leftButton, text: DisplayString.back, action: #selector(didTapLeft))
         setup(rightButton, text: DisplayString.next, action: #selector(didTapRight))
         
+        syncButtonActionState()
+        
         buttonStackView.addArrangedSubview(leftButton)
         buttonStackView.addArrangedSubview(rightButton)
     }
@@ -113,6 +124,17 @@ private extension GameViewController {
         constraints.activateConstraints(for: pageViewController.view)
     }
     
+    func syncButtonActionState() {
+        leftButton.isEnabled = viewModel.canMovePrev()
+        rightButton.isEnabled = viewModel.canMoveNext()
+        
+        if viewModel.isLast() {
+            rightButton.setTitle(DisplayString.submit, for: .normal)
+        } else {
+            rightButton.setTitle(DisplayString.next, for: .normal)
+        }
+    }
+    
     func setup(_ label: UILabel, text: String, fontSize: CGFloat) {
         label.textAlignment = .center
         label.text = text
@@ -129,20 +151,66 @@ private extension GameViewController {
     }
 }
 
+private extension GameViewController {
+    func askConset(_ completion: @escaping (Bool) -> Void) {
+        guard shouldShowConset else {
+            completion(true)
+            return
+        }
+        
+        let dontAskAgainAlertItem: AlertActionItem = .destructiveAction(title: DisplayString.dontAskAgain, handler: { [weak self] _ in
+            guard let self = self else { return }
+            self.shouldShowConset = false
+            completion(true)
+        })
+        
+        let oneTimeAlertItem: AlertActionItem = .destructiveAction(title: DisplayString.okay, handler: { _ in
+            completion(true)
+        })
+        
+        let cancelAlertItem: AlertActionItem = .action(title: DisplayString.cancel, handler: { _ in
+            completion(false)
+        })
+        
+        let alerts: [AlertActionItem] = [dontAskAgainAlertItem, oneTimeAlertItem, cancelAlertItem]
+        
+        self.showAlertController(with: DisplayString.wantToGoBack, message: DisplayString.currentSelectionWarning, alerts: alerts)
+    }
+}
+
 // MARK: - Button Action Methods
 private extension GameViewController {
     @objc func didTapLeft() {
-        guard viewModel.hasPrev() else { return }
+        guard viewModel.canMovePrev() else { return }
         
-        viewModel.moveToPrev()
-        pageViewController.setCurrentIndex(viewModel.selectedIndex)
+        let completion = { [weak self] status in
+                guard let self,
+                      status else { return }
+                
+                self.viewModel.moveToPrev()
+                self.pageViewController.setCurrentIndex(self.viewModel.selectedIndex)
+                self.syncButtonActionState()
+        }
+        
+        guard viewModel.currentSelectionValidity() else {
+            completion(true)
+            return
+        }
+        
+        askConset(completion)
     }
     
     @objc func didTapRight() {
-        guard viewModel.hasNext() else { return }
+        guard viewModel.canMoveNext() else { return }
+        
+        if viewModel.isLast() {
+            self.delegate.submitSelections()
+            return
+        }
         
         viewModel.moveToNext()
         pageViewController.setCurrentIndex(viewModel.selectedIndex)
+        syncButtonActionState()
     }
 }
 
@@ -151,7 +219,17 @@ extension GameViewController: FXPageViewControllerDataSource {
     func view(forItemAtIndex index: Int) -> UIView? {
         guard index >= 0 && index < viewModel.totalDestinationCount else { return nil }
         
-        return GameView(viewModel: self.viewModel)
+        return GameView(viewModel: self.viewModel, delegate: self)
+    }
+}
+
+extension GameViewController: GameViewDelegate {
+    func didUpdateData() {
+        syncButtonActionState()
+    }
+    
+    func showAlert(with title: String) {
+        showAlertController(with: title, alerts: [.action(title: DisplayString.cancel)])
     }
 }
 
@@ -159,8 +237,8 @@ extension GameViewController: FXPageViewControllerDataSource {
 private struct Constraints {
     static let titleLabelFontSize = CGFloat(32.0)
     static let descriptionLabelFontSize = CGFloat(18.0)
-    static let topMargin = CGFloat(32.0)
-    static let leftMargin = CGFloat(16.0)
-    static let gap = CGFloat(32.0)
-    static let contentHeight = CGFloat(400)
+    static let topMargin = CGFloat(64.0)
+    static let horizontalMargin = CGFloat(16.0)
+    static let gap = CGFloat(64.0)
+    static let contentHeight = CGFloat(200)
 }

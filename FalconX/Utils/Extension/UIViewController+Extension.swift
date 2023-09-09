@@ -11,6 +11,7 @@ import UIKit
 enum AlertActionItem {
     case action(title: String, handler: ((UIAlertAction?) -> Void)? = nil)
     case cancelAction(title: String, handler: ((UIAlertAction?) -> Void)? = nil)
+    case destructiveAction(title: String, handler: ((UIAlertAction?) -> Void)? = nil)
 }
 
 extension UIViewController {
@@ -33,6 +34,8 @@ extension UIViewController {
                 alertController.addAction(.init(title: title, style: .default, handler: handler))
             case .cancelAction(title: let title, handler: let handler):
                 alertController.addAction(.init(title: title, style: .cancel, handler: handler))
+            case .destructiveAction(title: let title, handler: let handler):
+                alertController.addAction(.init(title: title, style: .destructive, handler: handler))
             }
         }
         

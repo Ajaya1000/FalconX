@@ -17,8 +17,7 @@ class GameCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        showLoadingScreen()
-        loadGameData()
+        startGame()
     }
     
     deinit {
@@ -27,6 +26,11 @@ class GameCoordinator: BaseCoordinator {
 }
 
 private extension GameCoordinator {
+    func startGame() {
+        showLoadingScreen()
+        loadGameData()
+    }
+    
     func loadGameData() {
         viewModel.loadData { [weak self] sessionError, planetError, vehicleError in
             guard let self else { return }
@@ -52,7 +56,7 @@ private extension GameCoordinator {
             }
             
             DispatchQueue.main.async {
-                self.startGame()
+                self.showGame()
             }
         }
     }
@@ -64,10 +68,32 @@ private extension GameCoordinator {
         self.navigationController.pushViewController(viewController, animated: false)
     }
     
-    func startGame() {
+    func showGame() {
         self.removeChildCoordinators()
         
-        let viewController = GameViewController(viewModel: self.viewModel)
+        let viewController = GameViewController(viewModel: self.viewModel, delegate: self)
         self.navigationController.replaceTop(with: viewController, fade: false)
+    }
+    
+    func showResult() {
+        self.removeChildCoordinators()
+        
+        let viewController = ResultViewController(viewModel: self.viewModel, delegate: self)
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - GameViewControllerDelegate
+extension GameCoordinator: GameViewControllerDelegate {
+    func submitSelections() {
+        showResult()
+    }
+}
+
+//MARK: - ResultViewControllerDelegate
+extension GameCoordinator: ResultViewControllerDelegate {
+    func startOver() {
+        viewModel.reset()
+        startGame()
     }
 }

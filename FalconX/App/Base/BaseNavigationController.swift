@@ -14,7 +14,7 @@ class BaseNavigationController: UINavigationController {
         super.viewDidLoad()
         self.navigationBar.isTranslucent = false
         self.navigationBar.tintColor = ColorPreferences.primary
-        self.navigationBar.barTintColor = ColorPreferences.primary
+        self.navigationBar.barTintColor = ColorPreferences.secondary
         self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorPreferences.primary]
     }
 }

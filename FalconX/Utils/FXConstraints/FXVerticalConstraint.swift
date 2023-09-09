@@ -51,4 +51,34 @@ enum FXVerticalConstraint: FXLayoutAxisConstraint {
         // return the constraint
         return constraint
     }
+    
+    func nsLayoutConstraint(for childView: UIView, with layoutGuide: UILayoutGuide) -> NSLayoutConstraint {
+        // to store the final constraint
+        let constraint: NSLayoutConstraint
+        
+        // initialize constraint
+        switch self {
+        case .top(let constant, let reverse):
+            // get the super view anchor
+            let superViewAnchor = reverse ? layoutGuide.bottomAnchor : layoutGuide.topAnchor
+            
+            // Initializing top anchor
+            // and assigning it to constraint
+            constraint = childView.topAnchor.constraint(equalTo: superViewAnchor, constant: constant)
+        case .bottom(let constant, let reverse):
+            // get the super view anchor
+            let superViewAnchor = reverse ? layoutGuide.topAnchor : layoutGuide.bottomAnchor
+            
+            // Initializing bottom anchor
+            // and assigning it to constraint
+            constraint = childView.bottomAnchor.constraint(equalTo: superViewAnchor, constant: -constant)
+        case .center:
+            // Initializing Y-axis center anchor
+            // and assigning it to constraint
+            constraint = childView.centerYAnchor.constraint(equalTo: layoutGuide.centerYAnchor)
+        }
+        
+        // return the constraint
+        return constraint
+    }
 }

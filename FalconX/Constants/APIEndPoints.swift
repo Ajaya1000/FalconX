@@ -12,4 +12,5 @@ struct APIEndPoints {
     static let planets = "\(base)/planets"
     static let vehicles = "\(base)/vehicles"
     static let token = "\(base)/token"
+    static let find = "\(base)/find"
 }

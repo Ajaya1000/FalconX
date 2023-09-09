@@ -40,6 +40,7 @@ private extension FXButton {
         
         self.setTitleColor(ColorPreferences.primary, for: .normal)
         self.setTitleColor(ColorPreferences.primary, for: .highlighted)
+        self.setTitleColor(ColorPreferences.gray, for: .disabled)
         
         
         self.layer.shadowColor = ColorPreferences.primary.cgColor

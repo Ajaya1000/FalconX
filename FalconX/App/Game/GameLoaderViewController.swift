@@ -8,7 +8,6 @@
 import UIKit
 
 class GameLoaderViewController: BaseViewController {
-    
     private var loaderContainerView: UIView!
     private var loaderView: FXLoaderView!
     

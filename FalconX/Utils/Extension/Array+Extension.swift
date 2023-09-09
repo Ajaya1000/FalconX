@@ -34,6 +34,16 @@ extension Array where Element == FXLayoutAxisConstraint {
             constraints.nsLayoutConstraint(for: childView, with: superView)
         }
     }
+    
+    func activateConstraints(for childView: UIView, with layoutGuide: UILayoutGuide) {
+        getConstraints(for: childView, with: layoutGuide).activate()
+    }
+    
+    func getConstraints(for childView: UIView, with layoutGuide: UILayoutGuide) -> [NSLayoutConstraint] {
+        return map { constraints in
+            constraints.nsLayoutConstraint(for: childView, with: layoutGuide)
+        }
+    }
 }
 
 extension Array where Element == NSLayoutConstraint {

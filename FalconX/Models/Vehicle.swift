@@ -13,10 +13,14 @@ struct Vehicle: Decodable {
     var maxDistance: Int?
     var speed: Int?
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case name
         case count = "total_no"
         case maxDistance = "max_distance"
         case speed
     }
+}
+
+extension Vehicle: Equatable {
+    
 }
