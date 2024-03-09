@@ -14,6 +14,7 @@ class HomeCoordinator: BaseCoordinator {
         viewController.delegate = self
         
         self.navigationController.setViewControllers([viewController], animated: true)
+        self.activeViewcontrollers.append(viewController)
     }
 }
 

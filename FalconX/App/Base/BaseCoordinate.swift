@@ -10,6 +10,7 @@ import UIKit
 
 protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get set }
+    var activeViewcontrollers: [UIViewController] { get set }
     var parentCoordinator: Coordinator? { get set }
     
     func start()
@@ -19,6 +20,8 @@ protocol Coordinator: AnyObject {
 }
 
 class BaseCoordinator: Coordinator {
+    var activeViewcontrollers: [UIViewController] = []
+    
     var childCoordinators: [Coordinator] = []
     
     var navigationController = UINavigationController()
@@ -35,13 +38,17 @@ class BaseCoordinator: Coordinator {
     }
     
     func didFinish(coordinator: Coordinator) {
-        if let index = self.childCoordinators.firstIndex(where: { $0 === coordinator }) {
-            self.childCoordinators.remove(at: index)
+        guard let index = self.childCoordinators.firstIndex(where: { $0 === coordinator }) else {
+            return
         }
+        
+        coordinator.removeChildCoordinators()
+        self.childCoordinators.remove(at: index)
     }
     
     func removeChildCoordinators() {
-        self.childCoordinators.forEach { $0.removeChildCoordinators() }
-        self.childCoordinators.removeAll()
+        self.childCoordinators.forEach { didFinish(coordinator: $0) }
+        let viewControllers = navigationController.viewControllers.filter({!self.activeViewcontrollers.contains($0)})
+        self.navigationController.setViewControllers(viewControllers, animated: false)
     }
 }

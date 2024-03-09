@@ -29,10 +29,10 @@ class NetworkManager {
     ///   - httMethod: http method
     ///   - completion: completion closure gets call after the request is complete with result of either the request type or error
     func request<T: Decodable>(url: URL,
-                                             httMethod: HttpMethods = .get,
-                                             httpHeaders: [String: String]? = nil,
-                                             httpBody: Encodable? = nil,
-                                             completion: @escaping (Result<T, Error>) -> Void) {
+                               httMethod: HttpMethods = .get,
+                               httpHeaders: [String: String]? = nil,
+                               httpBody: Encodable? = nil,
+                               completion: @escaping (Result<T, Error>) -> Void) {
         
         var request = URLRequest(url: url)
         request.httpMethod = httMethod.value

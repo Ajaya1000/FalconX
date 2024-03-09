@@ -34,10 +34,6 @@ private extension GameCoordinator {
     func loadGameData() {
         viewModel.loadData { [weak self] sessionError, planetError, vehicleError in
             guard let self else { return }
-            // debug errors
-            debugPrint(sessionError)
-            debugPrint(planetError)
-            debugPrint(vehicleError)
             
             guard sessionError == nil,
                   planetError == nil,
@@ -62,24 +58,21 @@ private extension GameCoordinator {
     }
     
     func showLoadingScreen() {
-        self.removeChildCoordinators()
-        
         let viewController = GameLoaderViewController()
         self.navigationController.pushViewController(viewController, animated: false)
+        self.activeViewcontrollers.append(viewController)
     }
     
     func showGame() {
-        self.removeChildCoordinators()
-        
         let viewController = GameViewController(viewModel: self.viewModel, delegate: self)
         self.navigationController.replaceTop(with: viewController, fade: false)
+        self.activeViewcontrollers.append(viewController)
     }
     
     func showResult() {
-        self.removeChildCoordinators()
-        
         let viewController = ResultViewController(viewModel: self.viewModel, delegate: self)
         self.navigationController.pushViewController(viewController, animated: true)
+        self.activeViewcontrollers.append(viewController)
     }
 }
 
@@ -94,6 +87,7 @@ extension GameCoordinator: GameViewControllerDelegate {
 extension GameCoordinator: ResultViewControllerDelegate {
     func startOver() {
         viewModel.reset()
+        self.removeChildCoordinators()
         startGame()
     }
 }
