@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '16.2'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'FalconX' do
@@ -9,6 +9,7 @@ target 'FalconX' do
   # Pods for FalconX
   pod 'Swinject', '2.8.3'
   pod 'SwinjectAutoregistration', '2.8.3'
+  pod 'lottie-ios', '4.4.1'
   pod 'XConstraintKit', :path=> '../devPod/XConstraintKit'
 
   target 'FalconXTests' do
