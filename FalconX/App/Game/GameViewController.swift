@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XConstraintKit
 
 protocol GameViewControllerDelegate: AnyObject {
     func submitSelections()
@@ -55,10 +56,10 @@ private extension GameViewController {
         self.backgroundView.addSubview(containerView)
 
         // add constraints
-        let contentLayoutconstraints: [FXLayoutAxisConstraint] = [FXVerticalConstraint.top(constant: Constraints.topMargin),
-                                                                  FXVerticalConstraint.bottom(),
-                                                     FXHorizontalConstraint.left(constant: Constraints.horizontalMargin),
-                                                      FXHorizontalConstraint.right(constant: Constraints.horizontalMargin)]
+        let contentLayoutconstraints: [XLayoutAxisConstraint] = [XVerticalConstraint.top(constant: Constraints.topMargin),
+                                                                  XVerticalConstraint.bottom(),
+                                                     XHorizontalConstraint.left(constant: Constraints.horizontalMargin),
+                                                      XHorizontalConstraint.right(constant: Constraints.horizontalMargin)]
         
         contentLayoutconstraints.activateConstraints(for: containerView, with: self.backgroundView.contentLayoutGuide)
         
@@ -119,7 +120,7 @@ private extension GameViewController {
         
         pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        let constraints: [FXLayoutDimensionConstraint] = [FXDimensionConstraint.height(constant: Constraints.contentHeight)]
+        let constraints: [XLayoutDimensionConstraint] = [XDimensionConstraint.height(constant: Constraints.contentHeight)]
         
         constraints.activateConstraints(for: pageViewController.view)
     }

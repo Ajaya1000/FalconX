@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XConstraintKit
 
 class FXScrollViewController: BaseViewController {
 
@@ -36,10 +37,10 @@ private extension FXScrollViewController {
         
         self.view.addSubview(backgroundView)
         
-        let constraints: [FXLayoutAxisConstraint] = [FXHorizontalConstraint.left(),
-                                                     FXHorizontalConstraint.right(),
-                                                     FXVerticalConstraint.top(),
-                                                     FXVerticalConstraint.bottom()]
+        let constraints: [XLayoutAxisConstraint] = [XHorizontalConstraint.left(),
+                                                     XHorizontalConstraint.right(),
+                                                     XVerticalConstraint.top(),
+                                                     XVerticalConstraint.bottom()]
         
         constraints.activateConstraints(for: self.view, with: backgroundView.frameLayoutGuide)
         

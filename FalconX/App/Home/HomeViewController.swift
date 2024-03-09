@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XConstraintKit
 
 protocol HomeDelegate: AnyObject {
     func startGame()
@@ -47,9 +48,9 @@ private extension HomeViewController {
         
         self.view.addSubview(containerStack)
         
-        let constraints: [FXLayoutAxisConstraint] = [FXHorizontalConstraint.left(constant: Constraints.margin),
-                                                     FXHorizontalConstraint.right(constant: Constraints.margin),
-                                                     FXVerticalConstraint.center]
+        let constraints: [XLayoutAxisConstraint] = [XHorizontalConstraint.left(constant: Constraints.margin),
+                                                     XHorizontalConstraint.right(constant: Constraints.margin),
+                                                     XVerticalConstraint.center]
         constraints.activateConstraints(for: containerStack, with: self.view)
     }
     

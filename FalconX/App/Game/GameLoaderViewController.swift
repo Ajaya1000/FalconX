@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XConstraintKit
 
 class GameLoaderViewController: BaseViewController {
     private var loaderContainerView: UIView!
@@ -24,10 +25,10 @@ private extension GameLoaderViewController {
         loaderContainerView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(loaderContainerView)
         
-        let axialConstraints: [FXLayoutAxisConstraint] = [FXVerticalConstraint.center,
-                                                          FXHorizontalConstraint.center]
-        let dimensionalConstraints: [FXLayoutDimensionConstraint] = [FXDimensionConstraint.height(constant: Constraints.dimension),
-                                                                     FXDimensionConstraint.width(constant: Constraints.dimension)]
+        let axialConstraints: [XLayoutAxisConstraint] = [XVerticalConstraint.center,
+                                                          XHorizontalConstraint.center]
+        let dimensionalConstraints: [XLayoutDimensionConstraint] = [XDimensionConstraint.height(constant: Constraints.dimension),
+                                                                     XDimensionConstraint.width(constant: Constraints.dimension)]
         
         axialConstraints.activateConstraints(for: loaderContainerView, with: self.view)
         dimensionalConstraints.activateConstraints(for: loaderContainerView)

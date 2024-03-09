@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XConstraintKit
 
 protocol GameViewDelegate: AnyObject {
     func didUpdateData()
@@ -74,10 +75,10 @@ private extension GameView {
         // Add Container Stack View
         self.addSubview(containerView)
         
-        let constraints: [FXLayoutAxisConstraint] = [FXHorizontalConstraint.right(constant: Constraints.outerMargin),
-                                                     FXHorizontalConstraint.left(constant: Constraints.outerMargin),
-                                                     FXVerticalConstraint.top(),
-                                                     FXVerticalConstraint.bottom()]
+        let constraints: [XLayoutAxisConstraint] = [XHorizontalConstraint.right(constant: Constraints.outerMargin),
+                                                     XHorizontalConstraint.left(constant: Constraints.outerMargin),
+                                                     XVerticalConstraint.top(),
+                                                     XVerticalConstraint.bottom()]
         
         // Activate required constraints
         constraints.activateConstraints(for: containerView, with: self)

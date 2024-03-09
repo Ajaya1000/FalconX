@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XConstraintKit
 
 protocol ResultViewControllerDelegate: AnyObject {
     func startOver()
@@ -62,11 +63,11 @@ private extension ResultViewController {
         loaderContainerView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(loaderContainerView)
         
-        let axialConstraints: [FXLayoutAxisConstraint] = [FXVerticalConstraint.center,
-                                                          FXHorizontalConstraint.center]
+        let axialConstraints: [XLayoutAxisConstraint] = [XVerticalConstraint.center,
+                                                          XHorizontalConstraint.center]
         
-        let dimensionalConstraints: [FXLayoutDimensionConstraint] = [FXDimensionConstraint.height(constant: Constraints.loaderDimension),
-                                                                     FXDimensionConstraint.width(constant: Constraints.loaderDimension)]
+        let dimensionalConstraints: [XLayoutDimensionConstraint] = [XDimensionConstraint.height(constant: Constraints.loaderDimension),
+                                                                     XDimensionConstraint.width(constant: Constraints.loaderDimension)]
         
         axialConstraints.activateConstraints(for: loaderContainerView, with: self.view)
         dimensionalConstraints.activateConstraints(for: loaderContainerView)
@@ -87,9 +88,9 @@ private extension ResultViewController {
         self.view.addSubview(containerStackView)
         
         // add constraints
-        let containerConstraint: [FXLayoutAxisConstraint] = [FXVerticalConstraint.center,
-                                                             FXHorizontalConstraint.left(constant: Constraints.outerMargin),
-                                                             FXHorizontalConstraint.right(constant: Constraints.outerMargin)]
+        let containerConstraint: [XLayoutAxisConstraint] = [XVerticalConstraint.center,
+                                                             XHorizontalConstraint.left(constant: Constraints.outerMargin),
+                                                             XHorizontalConstraint.right(constant: Constraints.outerMargin)]
         
         containerConstraint.activateConstraints(for: containerStackView, with: self.view)
         

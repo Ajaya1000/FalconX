@@ -54,12 +54,12 @@ class GameViewModel {
     
     // MARK: - Computed properties
     var availablePlanets: [Planet] {
-        var availablePlantes = planetsData ?? []
+        var _availablePlantes = planetsData ?? []
         
         // remove already selected planets
-        selectedPlantes.compactMap({$0}).forEach({ availablePlantes.remove($0)})
+        selectedPlantes.compactMap({$0}).forEach({ _availablePlantes.remove($0)})
         
-        return availablePlantes
+        return _availablePlantes
     }
     
     var availableVehicles: [Vehicle] {

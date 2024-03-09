@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XConstraintKit
 
 protocol FXPageViewControllerDataSource: AnyObject {
     func view(forItemAtIndex index: Int) -> UIView?
@@ -33,10 +34,10 @@ private extension FXPageViewController {
         contentView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(contentView)
         
-        let constraints: [FXLayoutAxisConstraint] = [FXHorizontalConstraint.left(),
-                                                                FXHorizontalConstraint.right(),
-                                                                FXVerticalConstraint.top(),
-                                                                FXVerticalConstraint.bottom()]
+        let constraints: [XLayoutAxisConstraint] = [XHorizontalConstraint.left(),
+                                                                XHorizontalConstraint.right(),
+                                                                XVerticalConstraint.top(),
+                                                                XVerticalConstraint.bottom()]
         
         constraints.activateConstraints(for: contentView, with: self.view)
         
@@ -59,10 +60,10 @@ extension FXPageViewController {
 
         let direction: NavigationDirection = newIndex > currentIndex ? .forward : .reverse
         
-        let constraints: [FXLayoutAxisConstraint] = [FXHorizontalConstraint.left(),
-                                                                FXHorizontalConstraint.right(),
-                                                                FXVerticalConstraint.top(),
-                                                                FXVerticalConstraint.bottom()]
+        let constraints: [XLayoutAxisConstraint] = [XHorizontalConstraint.left(),
+                                                                XHorizontalConstraint.right(),
+                                                                XVerticalConstraint.top(),
+                                                                XVerticalConstraint.bottom()]
         if animated {
             UIView.transition(with: contentView, duration: 0.3, options: [.transitionCrossDissolve], animations: {
                 newView.translatesAutoresizingMaskIntoConstraints = false

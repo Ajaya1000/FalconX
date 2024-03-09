@@ -19,11 +19,6 @@
 		A54B42412AA7A9CC00871E1C /* DisplayString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42402AA7A9CC00871E1C /* DisplayString.swift */; };
 		A54B42442AA7ACCD00871E1C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42432AA7ACCD00871E1C /* UIColor+Extension.swift */; };
 		A54B42462AA7ACEF00871E1C /* ColorPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42452AA7ACEF00871E1C /* ColorPreferences.swift */; };
-		A54B42492AA7B13C00871E1C /* FXLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42482AA7B13C00871E1C /* FXLayoutConstraint.swift */; };
-		A54B424B2AA7B16F00871E1C /* FXDimensionConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B424A2AA7B16F00871E1C /* FXDimensionConstraint.swift */; };
-		A54B424D2AA7B1A300871E1C /* FXHorizontalConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B424C2AA7B1A300871E1C /* FXHorizontalConstraint.swift */; };
-		A54B424F2AA7B1D400871E1C /* FXVerticalConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B424E2AA7B1D400871E1C /* FXVerticalConstraint.swift */; };
-		A54B42512AA7B2BD00871E1C /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42502AA7B2BD00871E1C /* Array+Extension.swift */; };
 		A54B42552AA7B86700871E1C /* FXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42542AA7B86700871E1C /* FXButton.swift */; };
 		A54B425D2AA83D3700871E1C /* BaseCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B425C2AA83D3700871E1C /* BaseCoordinate.swift */; };
 		A54B425F2AA840CF00871E1C /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B425E2AA840CF00871E1C /* BaseNavigationController.swift */; };
@@ -60,6 +55,7 @@
 		A54B42A92AAAF81400871E1C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42A82AAAF81400871E1C /* String+Extension.swift */; };
 		A54B42AB2AAC3A0500871E1C /* FindPlanetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42AA2AAC3A0500871E1C /* FindPlanetRequest.swift */; };
 		A54B42AD2AAC3CCB00871E1C /* FindPlanetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B42AC2AAC3CCB00871E1C /* FindPlanetResponse.swift */; };
+		A5ECE44A2B9C566F0076E994 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ECE4492B9C566F0076E994 /* Array+Extension.swift */; };
 		B6EE71B46B3553D9879F43C5 /* Pods_FalconX_FalconXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB59F0D3DD0F65AA33B0EF4A /* Pods_FalconX_FalconXUITests.framework */; };
 		EB0F35F9C85190A114115863 /* Pods_FalconXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529FA2E2E1CD8D61411B4FFB /* Pods_FalconXTests.framework */; };
 /* End PBXBuildFile section */
@@ -105,11 +101,6 @@
 		A54B42402AA7A9CC00871E1C /* DisplayString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayString.swift; sourceTree = "<group>"; };
 		A54B42432AA7ACCD00871E1C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		A54B42452AA7ACEF00871E1C /* ColorPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPreferences.swift; sourceTree = "<group>"; };
-		A54B42482AA7B13C00871E1C /* FXLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXLayoutConstraint.swift; sourceTree = "<group>"; };
-		A54B424A2AA7B16F00871E1C /* FXDimensionConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXDimensionConstraint.swift; sourceTree = "<group>"; };
-		A54B424C2AA7B1A300871E1C /* FXHorizontalConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXHorizontalConstraint.swift; sourceTree = "<group>"; };
-		A54B424E2AA7B1D400871E1C /* FXVerticalConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXVerticalConstraint.swift; sourceTree = "<group>"; };
-		A54B42502AA7B2BD00871E1C /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		A54B42542AA7B86700871E1C /* FXButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FXButton.swift; sourceTree = "<group>"; };
 		A54B425C2AA83D3700871E1C /* BaseCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinate.swift; sourceTree = "<group>"; };
 		A54B425E2AA840CF00871E1C /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -146,6 +137,7 @@
 		A54B42A82AAAF81400871E1C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A54B42AA2AAC3A0500871E1C /* FindPlanetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPlanetRequest.swift; sourceTree = "<group>"; };
 		A54B42AC2AAC3CCB00871E1C /* FindPlanetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPlanetResponse.swift; sourceTree = "<group>"; };
+		A5ECE4492B9C566F0076E994 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		CB59F0D3DD0F65AA33B0EF4A /* Pods_FalconX_FalconXUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FalconX_FalconXUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,7 +179,6 @@
 				732781DB4CA4100BECB06481 /* Pods-FalconXTests.debug.xcconfig */,
 				7BB60E82143D33FA71433F39 /* Pods-FalconXTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -285,25 +276,14 @@
 			isa = PBXGroup;
 			children = (
 				A54B42432AA7ACCD00871E1C /* UIColor+Extension.swift */,
-				A54B42502AA7B2BD00871E1C /* Array+Extension.swift */,
 				A54B42832AA97CAC00871E1C /* Collection+Extension.swift */,
 				A54B42912AA9A3EF00871E1C /* UINavigationController+Extension.swift */,
 				A54B429A2AA9D3E000871E1C /* UIViewController+Extension.swift */,
 				A54B42A22AAA193D00871E1C /* UIAlertController+Extension.swift */,
 				A54B42A82AAAF81400871E1C /* String+Extension.swift */,
+				A5ECE4492B9C566F0076E994 /* Array+Extension.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		A54B42472AA7B11300871E1C /* FXConstraints */ = {
-			isa = PBXGroup;
-			children = (
-				A54B42482AA7B13C00871E1C /* FXLayoutConstraint.swift */,
-				A54B424A2AA7B16F00871E1C /* FXDimensionConstraint.swift */,
-				A54B424C2AA7B1A300871E1C /* FXHorizontalConstraint.swift */,
-				A54B424E2AA7B1D400871E1C /* FXVerticalConstraint.swift */,
-			);
-			path = FXConstraints;
 			sourceTree = "<group>";
 		};
 		A54B42592AA83CA300871E1C /* App */ = {
@@ -320,7 +300,6 @@
 		A54B425A2AA83CD400871E1C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A54B42472AA7B11300871E1C /* FXConstraints */,
 				A54B42422AA7AC9B00871E1C /* Extension */,
 				A54B429C2AA9D4CC00871E1C /* FXUtil.swift */,
 			);
@@ -642,7 +621,6 @@
 			files = (
 				A54B42992AA9D1B100871E1C /* Vehicle.swift in Sources */,
 				A54B42692AA8484200871E1C /* Container+Coordinators.swift in Sources */,
-				A54B42492AA7B13C00871E1C /* FXLayoutConstraint.swift in Sources */,
 				A54B429D2AA9D4CC00871E1C /* FXUtil.swift in Sources */,
 				A54B42922AA9A3EF00871E1C /* UINavigationController+Extension.swift in Sources */,
 				A54B42462AA7ACEF00871E1C /* ColorPreferences.swift in Sources */,
@@ -650,7 +628,6 @@
 				A54B42112AA7A1D500871E1C /* HomeViewController.swift in Sources */,
 				A54B42552AA7B86700871E1C /* FXButton.swift in Sources */,
 				A54B42942AA9A5E200871E1C /* BaseViewController.swift in Sources */,
-				A54B42512AA7B2BD00871E1C /* Array+Extension.swift in Sources */,
 				A54B42862AA9869100871E1C /* FXPageViewController.swift in Sources */,
 				A54B42A92AAAF81400871E1C /* String+Extension.swift in Sources */,
 				A54B42732AA85A8C00871E1C /* GameView.swift in Sources */,
@@ -658,7 +635,6 @@
 				A54B42A52AAA1E5500871E1C /* Session.swift in Sources */,
 				A54B42772AA85BDF00871E1C /* GameViewModel.swift in Sources */,
 				A54B429F2AAA072500871E1C /* GameService.swift in Sources */,
-				A54B424F2AA7B1D400871E1C /* FXVerticalConstraint.swift in Sources */,
 				A54B425F2AA840CF00871E1C /* BaseNavigationController.swift in Sources */,
 				A54B42802AA85E6200871E1C /* Container+Services.swift in Sources */,
 				A54B42842AA97CAC00871E1C /* Collection+Extension.swift in Sources */,
@@ -679,11 +655,10 @@
 				A54B42672AA8481300871E1C /* Container+RegisterDependencies.swift in Sources */,
 				A54B426F2AA85A4D00871E1C /* GameViewController.swift in Sources */,
 				A54B42642AA8475000871E1C /* HomeCoordinator.swift in Sources */,
-				A54B424D2AA7B1A300871E1C /* FXHorizontalConstraint.swift in Sources */,
-				A54B424B2AA7B16F00871E1C /* FXDimensionConstraint.swift in Sources */,
 				A54B42972AA9D18600871E1C /* Planet.swift in Sources */,
 				A54B42902AA9A08400871E1C /* FXLoaderView.swift in Sources */,
 				A54B42A72AAA6EAD00871E1C /* FXScrollViewController.swift in Sources */,
+				A5ECE44A2B9C566F0076E994 /* Array+Extension.swift in Sources */,
 				A54B42822AA86A4F00871E1C /* Container+ViewModels.swift in Sources */,
 				A54B42752AA85B0900871E1C /* ResultViewController.swift in Sources */,
 			);
