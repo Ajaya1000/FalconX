@@ -89,7 +89,7 @@ private extension ResultViewController {
         // add constraints
         let containerConstraint: [XLayoutAxisConstraint] = [.centerY,
                                                             .left.constant(to: Constraints.outerMargin),
-                                                            .right.constant(to: Constraints.outerMargin)]
+                                                            .right.constant(to: -Constraints.outerMargin)]
         
         containerConstraint.activateConstraints(for: containerStackView, with: self.view)
         
