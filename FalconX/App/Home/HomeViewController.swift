@@ -48,8 +48,8 @@ private extension HomeViewController {
         
         self.view.addSubview(containerStack)
         
-        let constraints: [XLayoutAxisConstraintable] = [XLayoutConstraint.left().constant(to: Constraints.margin),
-                                                    XLayoutConstraint.right().constant(to: Constraints.margin),
+        let constraints: [XLayoutAxisConstraintable] = [XLayoutAxisConstraint.left().constant(to: Constraints.margin),
+                                                    XLayoutAxisConstraint.right().constant(to: Constraints.margin),
                                                      XVerticalConstraint.center]
         constraints.activateConstraints(for: containerStack, with: self.view)
     }

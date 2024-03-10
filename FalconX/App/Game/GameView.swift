@@ -75,8 +75,8 @@ private extension GameView {
         // Add Container Stack View
         self.addSubview(containerView)
         
-        let constraints: [XLayoutAxisConstraintable] = [XLayoutConstraint.right().constant(to: Constraints.outerMargin),
-                                                    XLayoutConstraint.left().constant(to: Constraints.outerMargin),
+        let constraints: [XLayoutAxisConstraintable] = [XLayoutAxisConstraint.right().constant(to: Constraints.outerMargin),
+                                                    XLayoutAxisConstraint.left().constant(to: Constraints.outerMargin),
                                                      XVerticalConstraint.top(),
                                                      XVerticalConstraint.bottom()]
         

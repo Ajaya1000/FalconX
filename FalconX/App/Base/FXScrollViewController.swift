@@ -37,8 +37,8 @@ private extension FXScrollViewController {
         
         self.view.addSubview(backgroundView)
         
-        let constraints: [XLayoutAxisConstraintable] = [XLayoutConstraint.left(),
-                                                    XLayoutConstraint.right(),
+        let constraints: [XLayoutAxisConstraintable] = [XLayoutAxisConstraint.left(),
+                                                    XLayoutAxisConstraint.right(),
                                                      XVerticalConstraint.top(),
                                                     XVerticalConstraint.bottom()]
         
