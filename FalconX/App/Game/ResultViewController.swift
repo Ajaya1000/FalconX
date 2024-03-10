@@ -65,8 +65,8 @@ private extension ResultViewController {
         
         let axialConstraints: [XLayoutAxisConstraint] = [.centerX, .centerY]
         
-        let dimensionalConstraints: [XLayoutDimensionConstraintable] = [XDimensionConstraint.height(constant: Constraints.loaderDimension),
-                                                                     XDimensionConstraint.width(constant: Constraints.loaderDimension)]
+        let dimensionalConstraints: [XLayoutDimensionConstraint] = [.height.constant(to: Constraints.loaderDimension),
+                                                                    .width.constant(to: Constraints.loaderDimension)]
         
         axialConstraints.activateConstraints(for: loaderContainerView, with: self.view)
         dimensionalConstraints.activateConstraints(for: loaderContainerView)

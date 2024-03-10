@@ -120,7 +120,7 @@ private extension GameViewController {
         
         pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        let constraints: [XLayoutDimensionConstraintable] = [XDimensionConstraint.height(constant: Constraints.contentHeight)]
+        let constraints: [XLayoutDimensionConstraint] = [.height.constant(to: Constraints.contentHeight)]
         
         constraints.activateConstraints(for: pageViewController.view)
     }
