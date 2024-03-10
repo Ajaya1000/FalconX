@@ -25,9 +25,9 @@ private extension GameLoaderViewController {
         loaderContainerView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(loaderContainerView)
         
-        let axialConstraints: [XLayoutAxisConstraint] = [XVerticalConstraint.center,
-                                                          XHorizontalConstraint.center]
-        let dimensionalConstraints: [XLayoutDimensionConstraint] = [XDimensionConstraint.height(constant: Constraints.dimension),
+        let axialConstraints: [XLayoutAxisConstraintable] = [XVerticalConstraint.center,
+                                                          XLayoutConstraint.center()]
+        let dimensionalConstraints: [XLayoutDimensionConstraintable] = [XDimensionConstraint.height(constant: Constraints.dimension),
                                                                      XDimensionConstraint.width(constant: Constraints.dimension)]
         
         axialConstraints.activateConstraints(for: loaderContainerView, with: self.view)

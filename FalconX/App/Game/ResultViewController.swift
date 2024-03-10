@@ -63,10 +63,10 @@ private extension ResultViewController {
         loaderContainerView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(loaderContainerView)
         
-        let axialConstraints: [XLayoutAxisConstraint] = [XVerticalConstraint.center,
-                                                          XHorizontalConstraint.center]
+        let axialConstraints: [XLayoutAxisConstraintable] = [XVerticalConstraint.center,
+                                                          XLayoutConstraint.center()]
         
-        let dimensionalConstraints: [XLayoutDimensionConstraint] = [XDimensionConstraint.height(constant: Constraints.loaderDimension),
+        let dimensionalConstraints: [XLayoutDimensionConstraintable] = [XDimensionConstraint.height(constant: Constraints.loaderDimension),
                                                                      XDimensionConstraint.width(constant: Constraints.loaderDimension)]
         
         axialConstraints.activateConstraints(for: loaderContainerView, with: self.view)
@@ -88,9 +88,11 @@ private extension ResultViewController {
         self.view.addSubview(containerStackView)
         
         // add constraints
-        let containerConstraint: [XLayoutAxisConstraint] = [XVerticalConstraint.center,
-                                                             XHorizontalConstraint.left(constant: Constraints.outerMargin),
-                                                             XHorizontalConstraint.right(constant: Constraints.outerMargin)]
+        let containerConstraint: [XLayoutAxisConstraintable] = [XVerticalConstraint.center,
+           XLayoutConstraint.left()
+            .constant(to: Constraints.outerMargin),
+           XLayoutConstraint.right()
+            .constant(to: Constraints.outerMargin)]
         
         containerConstraint.activateConstraints(for: containerStackView, with: self.view)
         

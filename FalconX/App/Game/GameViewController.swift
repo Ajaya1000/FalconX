@@ -56,10 +56,10 @@ private extension GameViewController {
         self.backgroundView.addSubview(containerView)
 
         // add constraints
-        let contentLayoutconstraints: [XLayoutAxisConstraint] = [XVerticalConstraint.top(constant: Constraints.topMargin),
+        let contentLayoutconstraints: [XLayoutAxisConstraintable] = [XVerticalConstraint.top(constant: Constraints.topMargin),
                                                                   XVerticalConstraint.bottom(),
-                                                     XHorizontalConstraint.left(constant: Constraints.horizontalMargin),
-                                                      XHorizontalConstraint.right(constant: Constraints.horizontalMargin)]
+                                                                 XLayoutConstraint.left().constant(to: Constraints.horizontalMargin),
+                                                                 XLayoutConstraint.right().constant(to: Constraints.horizontalMargin)]
         
         contentLayoutconstraints.activateConstraints(for: containerView, with: self.backgroundView.contentLayoutGuide)
         
@@ -120,7 +120,7 @@ private extension GameViewController {
         
         pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        let constraints: [XLayoutDimensionConstraint] = [XDimensionConstraint.height(constant: Constraints.contentHeight)]
+        let constraints: [XLayoutDimensionConstraintable] = [XDimensionConstraint.height(constant: Constraints.contentHeight)]
         
         constraints.activateConstraints(for: pageViewController.view)
     }

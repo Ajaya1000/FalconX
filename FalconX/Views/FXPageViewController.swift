@@ -34,8 +34,8 @@ private extension FXPageViewController {
         contentView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(contentView)
         
-        let constraints: [XLayoutAxisConstraint] = [XHorizontalConstraint.left(),
-                                                                XHorizontalConstraint.right(),
+        let constraints: [XLayoutAxisConstraintable] = [XLayoutConstraint.left(),
+                                                    XLayoutConstraint.right(),
                                                                 XVerticalConstraint.top(),
                                                                 XVerticalConstraint.bottom()]
         
@@ -60,8 +60,8 @@ extension FXPageViewController {
 
         let direction: NavigationDirection = newIndex > currentIndex ? .forward : .reverse
         
-        let constraints: [XLayoutAxisConstraint] = [XHorizontalConstraint.left(),
-                                                                XHorizontalConstraint.right(),
+        let constraints: [XLayoutAxisConstraintable] = [XLayoutConstraint.left(),
+                                                    XLayoutConstraint.right(),
                                                                 XVerticalConstraint.top(),
                                                                 XVerticalConstraint.bottom()]
         if animated {
