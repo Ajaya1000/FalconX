@@ -56,8 +56,6 @@ private extension GameViewController {
         self.backgroundView.addSubview(containerView)
 
         // add constraints
-        let contentLayoutconstraints: [XLayoutAxisConstraint] = []
-        
         containerView.activate(with: self.backgroundView.contentLayoutGuide) { xc in
             xc.top.constant(to: Constraints.topMargin)
             xc.bottom

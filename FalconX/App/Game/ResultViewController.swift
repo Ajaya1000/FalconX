@@ -64,10 +64,10 @@ private extension ResultViewController {
         self.view.addSubview(loaderContainerView)
         
         loaderContainerView.activate(with: self.view) { xc in
-                xc.centerX
-                xc.centerY
-                xc.height.constant(to: Constraints.loaderDimension)
-                xc.width.constant(to: Constraints.loaderDimension)
+            xc.centerX
+            xc.centerY
+            xc.height.constant(to: Constraints.loaderDimension)
+            xc.width.constant(to: Constraints.loaderDimension)
         }
         
         loaderView = FXLoaderView(view: loaderContainerView)

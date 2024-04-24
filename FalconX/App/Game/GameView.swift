@@ -75,8 +75,6 @@ private extension GameView {
         // Add Container Stack View
         self.addSubview(containerView)
         
-        let constraints: [XLayoutAxisConstraint] = []
-        
         // Activate required constraints
         containerView.activate(with: self) { xc in
             xc.trailing.constant(to: -Constraints.outerMargin)
