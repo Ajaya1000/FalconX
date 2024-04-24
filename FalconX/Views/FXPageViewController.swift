@@ -43,14 +43,6 @@ private extension FXPageViewController {
         
         initialView.activate(with: contentView, constraints: constraintMaker)
     }
-    
-    @XLayoutConstraintBuilder
-    private func constraintMaker(xc: XLayoutConstraintMaker) -> [XLayoutConstraint] {
-        xc.leading
-        xc.trailing
-        xc.top
-        xc.bottom
-    }
 }
 
 // MARK: - Public Methods
@@ -62,32 +54,36 @@ extension FXPageViewController {
 
         let direction: NavigationDirection = newIndex > currentIndex ? .forward : .reverse
         
-        @XLayoutConstraintBuilder
-        func contraintMaker(xc: XLayoutConstraintMaker) -> [XLayoutConstraint] {
-            xc.leading
-            xc.trailing
-            xc.top
-            xc.bottom
-        }
-        
         if animated {
             UIView.transition(with: contentView, duration: 0.3, options: [.transitionCrossDissolve], animations: {
                 newView.translatesAutoresizingMaskIntoConstraints = false
                 self.contentView.subviews.forEach { $0.removeFromSuperview() }
                 self.contentView.addSubview(newView)
                 
-                newView.activate(with: self.contentView, constraints: contraintMaker)
+                newView.activate(with: self.contentView, constraints: self.constraintMaker)
             }, completion: nil)
         } else {
             newView.translatesAutoresizingMaskIntoConstraints = false
             contentView.subviews.forEach { $0.removeFromSuperview() }
             contentView.addSubview(newView)
-            newView.activate(with: self.contentView, constraints: contraintMaker)
+            newView.activate(with: self.contentView, constraints: constraintMaker)
         }
         
         currentIndex = newIndex
     }
 }
+
+// MARK: - File Private Methods
+fileprivate extension FXPageViewController {
+    @XLayoutConstraintBuilder
+    func constraintMaker(xc: XLayoutConstraintMaker) -> [XLayoutConstraint] {
+        xc.leading
+        xc.trailing
+        xc.top
+        xc.bottom
+    }
+}
+
 
 extension FXPageViewController {
     enum NavigationDirection {

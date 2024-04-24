@@ -37,16 +37,14 @@ private extension FXScrollViewController {
         
         self.view.addSubview(backgroundView)
         
-        self.view.activate(with: backgroundView.frameLayoutGuide) { xc in
-            xc.leading.withCenter
+        self.view.activate(with: backgroundView) { xc in
+            xc.leading
             xc.trailing
             xc.top
             xc.bottom
         }
         
-        backgroundView.contentLayoutGuide.activate(with: backgroundView.frameLayoutGuide) { xc in
-            xc.width
-        }
+        backgroundView.contentSize = self.view.bounds.size
     }
 }
 

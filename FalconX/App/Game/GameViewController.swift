@@ -56,9 +56,8 @@ private extension GameViewController {
         self.backgroundView.addSubview(containerView)
 
         // add constraints
-        containerView.activate(with: self.backgroundView.contentLayoutGuide) { xc in
+        containerView.activate(with: self.view) { xc in
             xc.top.constant(to: Constraints.topMargin)
-            xc.bottom
             xc.leading.constant(to: Constraints.horizontalMargin)
             xc.trailing.constant(to: -Constraints.horizontalMargin)
         }
@@ -87,6 +86,7 @@ private extension GameViewController {
     
     func setupContainerView() {
         containerView.axis = .vertical
+        containerView.alignment = .fill
 
         containerView.spacing = Constraints.gap
         
