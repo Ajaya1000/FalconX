@@ -9,7 +9,7 @@ DEPENDENCIES:
   - lottie-ios (= 4.4.1)
   - Swinject (= 2.8.3)
   - SwinjectAutoregistration (= 2.8.3)
-  - XConstraintKit (from `../devPod/XConstraintKit`)
+  - "XConstraintKit (from `git@github.com:Ajaya1000/XConstraintKit.git`, tag `v1`)"
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -19,7 +19,13 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   XConstraintKit:
-    :path: "../devPod/XConstraintKit"
+    :git: "git@github.com:Ajaya1000/XConstraintKit.git"
+    :tag: v1
+
+CHECKOUT OPTIONS:
+  XConstraintKit:
+    :git: "git@github.com:Ajaya1000/XConstraintKit.git"
+    :tag: v1
 
 SPEC CHECKSUMS:
   lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
@@ -27,6 +33,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: e3ee378dc458acf78d176fc7fec3902603452667
   XConstraintKit: 5da5cf6134196ead53cca16da883d8e9f9ff9498
 
-PODFILE CHECKSUM: 912b348265f58f756cdd00408cabb1247438f5a4
+PODFILE CHECKSUM: 4413d0ddd79b0e32071ba14350a6e6eaa2564ec8
 
 COCOAPODS: 1.15.2

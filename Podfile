@@ -10,7 +10,7 @@ target 'FalconX' do
   pod 'Swinject', '2.8.3'
   pod 'SwinjectAutoregistration', '2.8.3'
   pod 'lottie-ios', '4.4.1'
-  pod 'XConstraintKit', :path=> '../devPod/XConstraintKit'
+  pod 'XConstraintKit', :git => 'git@github.com:Ajaya1000/XConstraintKit.git', :tag => 'v1'
 
   target 'FalconXTests' do
     inherit! :search_paths
