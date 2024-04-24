@@ -63,13 +63,12 @@ private extension ResultViewController {
         loaderContainerView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(loaderContainerView)
         
-        let axialConstraints: [XLayoutAxisConstraint] = [.centerX, .centerY]
-        
-        let dimensionalConstraints: [XLayoutDimensionConstraint] = [.height.constant(to: Constraints.loaderDimension),
-                                                                    .width.constant(to: Constraints.loaderDimension)]
-        
-        axialConstraints.activateConstraints(for: loaderContainerView, with: self.view)
-        dimensionalConstraints.activateConstraints(for: loaderContainerView)
+        loaderContainerView.activate(with: self.view) { xc in
+                xc.centerX
+                xc.centerY
+                xc.height.constant(to: Constraints.loaderDimension)
+                xc.width.constant(to: Constraints.loaderDimension)
+        }
         
         loaderView = FXLoaderView(view: loaderContainerView)
         loaderView.play()
@@ -87,11 +86,11 @@ private extension ResultViewController {
         self.view.addSubview(containerStackView)
         
         // add constraints
-        let containerConstraint: [XLayoutAxisConstraint] = [.centerY,
-                                                            .leading.constant(to: Constraints.outerMargin),
-                                                            .trailing.constant(to: -Constraints.outerMargin)]
-        
-        containerConstraint.activateConstraints(for: containerStackView, with: self.view)
+        containerStackView.activate(with: self.view) { xc in
+            xc.centerY
+            xc.leading.constant(to: Constraints.outerMargin)
+            xc.trailing.constant(to: -Constraints.outerMargin)
+        }
         
         // setup title label
         setup(titleLabel, text: DisplayString.findingFalcon, fontSize: Constraints.titleLabelFontSize)

@@ -34,9 +34,14 @@ private extension FXPageViewController {
         contentView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(contentView)
         
-        let constraints: [XLayoutAxisConstraint] = [.leading, .trailing, .top, .bottom]
+        let constraints: [XLayoutAxisConstraint] = []
         
-        constraints.activateConstraints(for: contentView, with: self.view)
+        contentView.activate(with: self.view) { xc in
+            xc.leading
+            xc.trailing
+            xc.top
+            xc.bottom
+        }
         
         
         guard let initialView = dataSource?.view(forItemAtIndex: currentIndex) else { return }
@@ -57,20 +62,27 @@ extension FXPageViewController {
 
         let direction: NavigationDirection = newIndex > currentIndex ? .forward : .reverse
         
-        let constraints: [XLayoutAxisConstraint] = [.leading, .trailing, .top, .bottom]
+        @XLayoutConstraintBuilder
+        func contraintMaker(xc: XLayoutConstraintMaker) -> [XLayoutConstraint] {
+            xc.leading
+            xc.trailing
+            xc.top
+            xc.bottom
+        }
+        
         if animated {
             UIView.transition(with: contentView, duration: 0.3, options: [.transitionCrossDissolve], animations: {
                 newView.translatesAutoresizingMaskIntoConstraints = false
                 self.contentView.subviews.forEach { $0.removeFromSuperview() }
                 self.contentView.addSubview(newView)
-
-                constraints.activateConstraints(for: newView, with: self.contentView)
+                
+                newView.activate(with: self.contentView, constraints: contraintMaker)
             }, completion: nil)
         } else {
             newView.translatesAutoresizingMaskIntoConstraints = false
             contentView.subviews.forEach { $0.removeFromSuperview() }
             contentView.addSubview(newView)
-            constraints.activateConstraints(for: newView, with: self.contentView)
+            newView.activate(with: self.contentView, constraints: contraintMaker)
         }
         
         currentIndex = newIndex

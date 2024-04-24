@@ -25,12 +25,12 @@ private extension GameLoaderViewController {
         loaderContainerView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(loaderContainerView)
         
-        let axialConstraints: [XLayoutAxisConstraint] = [.centerX, .centerY]
-        let dimensionalConstraints: [XLayoutDimensionConstraint] = [.height.constant(to: Constraints.dimension),
-                                                                    .width.constant(to: Constraints.dimension)]
-        
-        axialConstraints.activateConstraints(for: loaderContainerView, with: self.view)
-        dimensionalConstraints.activateConstraints(for: loaderContainerView)
+        loaderContainerView.activate(with: self.view) { xc in
+            xc.centerX
+            xc.centerY
+            xc.height.constant(to: Constraints.dimension)
+            xc.width.constant(to: Constraints.dimension)
+        }
         
         loaderView = FXLoaderView(view: loaderContainerView)
         loaderView.play()

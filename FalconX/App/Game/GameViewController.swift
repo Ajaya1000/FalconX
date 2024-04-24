@@ -56,12 +56,14 @@ private extension GameViewController {
         self.backgroundView.addSubview(containerView)
 
         // add constraints
-        let contentLayoutconstraints: [XLayoutAxisConstraint] = [.top.constant(to: Constraints.topMargin),
-                                                                 .bottom,
-                                                                 .leading.constant(to: Constraints.horizontalMargin),
-                                                                 .trailing.constant(to: -Constraints.horizontalMargin)]
+        let contentLayoutconstraints: [XLayoutAxisConstraint] = []
         
-        contentLayoutconstraints.activateConstraints(for: containerView, with: self.backgroundView.contentLayoutGuide)
+        containerView.activate(with: self.backgroundView.contentLayoutGuide) { xc in
+            xc.top.constant(to: Constraints.topMargin)
+            xc.bottom
+            xc.leading.constant(to: Constraints.horizontalMargin)
+            xc.trailing.constant(to: -Constraints.horizontalMargin)
+        }
         
         // set up title label
         setup(titleLabel, text: DisplayString.findingFalcon, fontSize: Constraints.titleLabelFontSize)
@@ -120,9 +122,9 @@ private extension GameViewController {
         
         pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        let constraints: [XLayoutDimensionConstraint] = [.height.constant(to: Constraints.contentHeight)]
-        
-        constraints.activateConstraints(for: pageViewController.view)
+        pageViewController.view.activate { xc in
+            xc.height.constant(to: Constraints.contentHeight)
+        }
     }
     
     func syncButtonActionState() {

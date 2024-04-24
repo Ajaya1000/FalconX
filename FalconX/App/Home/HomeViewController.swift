@@ -48,10 +48,11 @@ private extension HomeViewController {
         
         self.view.addSubview(containerStack)
         
-        let constraints: [XLayoutAxisConstraint] = [.leading.constant(to: Constraints.margin),
-                                                    .trailing.constant(to: -Constraints.margin),
-                                                    .centerY]
-        constraints.activateConstraints(for: containerStack, with: self.view)
+        containerStack.activate(with: self.view) { xc in
+            xc.leading.constant(to: Constraints.margin)
+            xc.trailing.constant(to: -Constraints.margin)
+            xc.centerY
+        }
     }
     
     func addTitleLabel() {
