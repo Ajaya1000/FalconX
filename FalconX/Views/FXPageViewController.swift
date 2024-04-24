@@ -33,23 +33,23 @@ private extension FXPageViewController {
         contentView = UIView()
         contentView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(contentView)
-        
-        let constraints: [XLayoutAxisConstraint] = []
-        
-        contentView.activate(with: self.view) { xc in
-            xc.leading
-            xc.trailing
-            xc.top
-            xc.bottom
-        }
-        
-        
+                
+        contentView.activate(with: self.view, constraints: constraintMaker)
+    
         guard let initialView = dataSource?.view(forItemAtIndex: currentIndex) else { return }
         
         initialView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(initialView)
         
-        constraints.activateConstraints(for: initialView, with: contentView)
+        initialView.activate(with: contentView, constraints: constraintMaker)
+    }
+    
+    @XLayoutConstraintBuilder
+    private func constraintMaker(xc: XLayoutConstraintMaker) -> [XLayoutConstraint] {
+        xc.leading
+        xc.trailing
+        xc.top
+        xc.bottom
     }
 }
 
